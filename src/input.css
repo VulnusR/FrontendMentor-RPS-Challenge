@@ -40,7 +40,7 @@
         @apply
         font-thin
         text-blue-400
-        text-xl
+        text-base
         
     }
 
@@ -48,22 +48,23 @@
         @apply
         font-thin
         text-blue-400
-        text-2xl
+        text-3xl
+        
     }
 
     .score-font-tally {
         @apply
         font-extrabold
         text-blue-950
-        text-2xl
+        text-3xl
         
     }
 
     .xl-score-font-tally {
         @apply
         font-extrabold
-        text-blue-950
-        text-4xl
+        text-blue-900
+        text-8xl
     }
 }
 
@@ -114,6 +115,7 @@ header {
     flex-direction: column;
 
     align-items: center;
+    justify-items: center;
 
     padding: 2.5%;
 
@@ -121,10 +123,21 @@ header {
 }
 
 .scorebox-text {
-    height: 40%
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.scorebox-tallay {
+.scorebox-tally {
     height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
 }
+
+
+/* Footer */
+
 

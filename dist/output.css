@@ -541,16 +541,16 @@ video {
 }
 
 .score-font {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 100;
   --tw-text-opacity: 1;
   color: rgb(96 165 250 / var(--tw-text-opacity));
 }
 
 .score-font-tally {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
   font-weight: 800;
   --tw-text-opacity: 1;
   color: rgb(23 37 84 / var(--tw-text-opacity));
@@ -597,17 +597,26 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-items: center;
   padding: 2.5%;
   overflow: hidden;
 }
 
 .scorebox-text {
-  height: 40%
+  height: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.scorebox-tallay {
+.scorebox-tally {
   height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
+
+/* Footer */
 
 @media (prefers-color-scheme: dark) {
   .dark\:bg-dark {
@@ -631,19 +640,20 @@ header {
   }
 
   .desktop\:xl-score-font {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
     font-weight: 100;
     --tw-text-opacity: 1;
     color: rgb(96 165 250 / var(--tw-text-opacity));
   }
 
   .desktop\:xl-score-font-tally {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+    font-size: 6rem;
+    line-height: 1;
     font-weight: 800;
     --tw-text-opacity: 1;
-    color: rgb(23 37 84 / var(--tw-text-opacity));
+    color: rgb(30 58 138 / var(--tw-text-opacity));
   }
 }
+
 
