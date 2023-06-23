@@ -33,7 +33,7 @@
         @apply
         font-sans
         text-white
-        text-7xl
+        text-5xl
     }
 
     .score-font {
@@ -64,7 +64,7 @@
         @apply
         font-extrabold
         text-blue-950
-        text-8xl
+        text-6xl
     }
 }
 
@@ -165,12 +165,8 @@ main {
 }
 
 .game-bg-div {
-
     width: 40%;
     height: 70%;
-
-    
-
     background-image: url('../src/images/bg-triangle.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -179,18 +175,51 @@ main {
 }
 
 .game-upper-parent {
-    height: 15%;
+    height: 20%;
     display: flex;
+    padding-bottom: 50px;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    overflow: visible;
 }
 
 .game-lower-parent {
-    margin-top: 60%;
-    height: 25%;
+    margin-top: 50%;
+    height: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: visible;
+}
+
+
+.main-game-btn {
+
+    height: 175px;
+    width: 175px;
+    border: black 1px solid;
+    border-radius: 10rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: rgba(95, 93, 93, 0.396) 0px -10px 4px 3px inset;
+}
+
+.game-btn-inner {
+
+    height: 125px;
+    width: 125px;
+    border: black 1px solid;
+    border-radius: 10rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: rgb(95, 93, 93) 0px 10px 5px 5px inset;
 
 }
 
