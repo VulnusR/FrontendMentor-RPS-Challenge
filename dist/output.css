@@ -534,26 +534,31 @@ video {
 
 .header-font {
   font-family: Graphik, sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+/* text-base is the "default" or "base" size */
+
 .score-font {
   font-size: 1rem;
   line-height: 1.5rem;
-  font-weight: 100;
+  font-weight: 500;
+  letter-spacing: 0.05em;
   --tw-text-opacity: 1;
-  color: rgb(96 165 250 / var(--tw-text-opacity));
+  color: rgb(29 78 216 / var(--tw-text-opacity));
 }
 
 .score-font-tally {
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 800;
+  letter-spacing: -0.05em;
   --tw-text-opacity: 1;
-  color: rgb(23 37 84 / var(--tw-text-opacity));
+  color: rgb(87 83 78 / var(--tw-text-opacity));
 }
 
 .flex {
@@ -562,6 +567,12 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.space-y-0 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0px * var(--tw-space-y-reverse));
 }
 
 .bg-blue-400 {
@@ -587,6 +598,8 @@ video {
 body {
   height: 100vh;
   width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Header */
@@ -607,7 +620,7 @@ header {
   justify-self: center;
   flex-direction: row;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1rem;
   border: white 2px solid;
   border-radius: 2rem;
 }
@@ -615,6 +628,9 @@ header {
 .headerbox-title {
   height: 100%;
   width:60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .scorebox-parent {
@@ -754,39 +770,88 @@ footer {
   }
 }
 
-@media (min-width: 1366px) {
-  .lg\:xl-header-font {
+@media (min-width: 768px) {
+  .md\:md-header-font {
     font-family: Graphik, sans-serif;
-    font-size: 3rem;
-    line-height: 1;
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-}
-
-@media (min-width: 3200px) {
-  .desktop\:xl-header-font {
-    font-family: Graphik, sans-serif;
-    font-size: 3rem;
-    line-height: 1;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 600;
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 
-  .desktop\:xl-score-font {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
+  .md\:md-score-font {
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 100;
+    letter-spacing: 0.025em;
     --tw-text-opacity: 1;
-    color: rgb(96 165 250 / var(--tw-text-opacity));
+    color: rgb(29 78 216 / var(--tw-text-opacity));
   }
 
-  .desktop\:xl-score-font-tally {
+  .md\:md-score-font-tally {
     font-size: 3.75rem;
     line-height: 1;
     font-weight: 800;
+    letter-spacing: -0.05em;
     --tw-text-opacity: 1;
-    color: rgb(23 37 84 / var(--tw-text-opacity));
+    color: rgb(87 83 78 / var(--tw-text-opacity));
+  }
+}
+
+@media (min-width: 1366px) {
+  .lg\:lg-header-font {
+    font-family: Graphik, sans-serif;
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 600;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .lg\:lg-score-font {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    letter-spacing: 0.025em;
+    --tw-text-opacity: 1;
+    color: rgb(29 78 216 / var(--tw-text-opacity));
+  }
+
+  .lg\:lg-score-font-tally {
+    font-size: 4.5rem;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    --tw-text-opacity: 1;
+    color: rgb(87 83 78 / var(--tw-text-opacity));
+  }
+}
+
+@media (min-width: 2500px) {
+  .xl\:xl-header-font {
+    font-family: Graphik, sans-serif;
+    font-size: 3.75rem;
+    line-height: 1;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .xl\:xl-score-font {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    --tw-text-opacity: 1;
+    color: rgb(29 78 216 / var(--tw-text-opacity));
+  }
+
+  .xl\:xl-score-font-tally {
+    font-size: 6rem;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    --tw-text-opacity: 1;
+    color: rgb(87 83 78 / var(--tw-text-opacity));
   }
 }
 

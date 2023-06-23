@@ -24,54 +24,105 @@
     .header-font {
         @apply
         font-sans
+        font-bold
         text-white
-        text-xl
-        
-        
+        text-2xl
+    }
+
+    .md-header-font {
+        @apply
+        font-sans
+        font-semibold
+        text-white
+        text-4xl
+    }
+
+    .lg-header-font {
+        @apply
+        font-sans
+        font-semibold
+        text-white
+        text-5xl
     }
 
     .xl-header-font {
         @apply
         font-sans
         text-white
-        text-5xl
+        text-6xl
     }
 
+
+    /* text-base is the "default" or "base" size */
     .score-font {
         @apply
-        font-thin
-        text-blue-400
+        font-medium
+        text-blue-700
         text-base
-        
+        tracking-wider
+    }
+
+    .md-score-font {
+        @apply
+        font-thin
+        text-blue-700
+        text-2xl
+        tracking-wide
+    }
+
+    .lg-score-font {
+        @apply
+        text-blue-700
+        text-3xl
+        tracking-wide
     }
 
     .xl-score-font {
         @apply
-        font-thin
-        text-blue-400
+        font-medium
+        text-blue-700
         text-3xl
-        
+        tracking-wider
     }
 
     .score-font-tally {
         @apply
         font-extrabold
-        text-blue-950
+        text-stone-600
         text-3xl
-        
+        tracking-tighter
+    }
+
+    .md-score-font-tally {
+        @apply
+        font-extrabold
+        text-stone-600
+        text-6xl
+        tracking-tighter
+    }
+
+    .lg-score-font-tally {
+        @apply
+        font-extrabold
+        text-stone-600
+        text-7xl
+        tracking-tighter
     }
 
     .xl-score-font-tally {
         @apply
-        font-extrabold
-        text-blue-950
-        text-6xl
+        font-black
+        text-stone-600
+        text-8xl
+        tracking-tighter
     }
 }
 
 body {
     height: 100vh;
     width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Header */
@@ -95,7 +146,7 @@ header {
 
     flex-direction: row;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 1rem;
     border: white 2px solid;
     border-radius: 2rem;
 }
@@ -103,6 +154,10 @@ header {
 .headerbox-title {
     height: 100%;
     width:60%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .scorebox-parent {
