@@ -534,8 +534,8 @@ video {
 
 .header-font {
   font-family: Graphik, sans-serif;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -577,11 +577,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-yellow-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(253 224 71 / var(--tw-bg-opacity));
 }
 
 .bg-yellow-400 {
@@ -760,6 +755,16 @@ footer {
 }
 
 @media (min-width: 1366px) {
+  .lg\:xl-header-font {
+    font-family: Graphik, sans-serif;
+    font-size: 3rem;
+    line-height: 1;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+
+@media (min-width: 3200px) {
   .desktop\:xl-header-font {
     font-family: Graphik, sans-serif;
     font-size: 3rem;

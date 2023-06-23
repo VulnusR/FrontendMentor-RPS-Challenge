@@ -8,16 +8,16 @@ module.exports = {
       serif: ['Merriweather', 'serif'],
     },
     screens: {
-      'mobile': '375px',
+      'sm': '375px',
       // => @media (min-width: 375px) { ... }
 
       'md': '768px',
       // => @media (min-width: 768px) { ... }
 
-      'lg': '1024px',
+      'lg': '1366px',
       // => @media (min-width: 1024px) { ... }
 
-      'desktop': '1366px',
+      'desktop': '3200px',
       // => @media (min-width: 1366px) { ... }
     }
   },
