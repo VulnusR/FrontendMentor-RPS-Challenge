@@ -570,6 +570,8 @@ video {
 
 /* Main Components */
 
+/* Game Page (Main Subsection) */
+
 /* Triangle Bg control */
 
 .game-bg-div {
@@ -607,8 +609,67 @@ video {
 
 /*Shadow Effects */
 
-.invisible {
-  visibility: hidden;
+/* Results Section (main subsection) */
+
+/* Fonts */
+
+.results-overhead-text {
+  font-family: Graphik, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+#results-lower-center-text {
+  font-family: Graphik, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+#md-results-lower-center-text {
+  font-family: Graphik, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+#lg-results-lower-center-text {
+  font-family: Graphik, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+#xl-results-lower-center-text {
+  font-family: Graphik, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+/* Results Componets */
+
+#results-btn {
+  border: rgb(32, 114, 196) 2px solid;
+  border-radius: 2rem;
+  padding: 1%;
+  margin: 1%;
+  background-color: rgb(203, 203, 203);
+  color: rgba(255, 255, 255, 0);
+  height: 55%;
+  min-width: 115px;
+  width: 10%;
 }
 
 .absolute {
@@ -686,12 +747,6 @@ body {
   width: 100vw;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.invisible {
-  display: none;
-  height: 0vh;
-  width: 0vw;
 }
 
 /* Header */
@@ -775,6 +830,8 @@ main {
   align-items: center;
 }
 
+/* Round Start (Main Subsection) */
+
 .game-upper-parent {
   height: 20%;
   display: flex;
@@ -792,6 +849,46 @@ main {
   justify-content: center;
   align-items: center;
   overflow: visible;
+}
+
+/* Round Results (Main Subsection) */
+
+.results-parent {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.results-side-parent {
+  height: 100%;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+.results-side-upper {
+  height: 15%;
+  width: 100%;
+}
+
+.results-side-lower {
+  height: 85%;
+  width: 100%;
+}
+
+.results-center-parent {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.results-center-container {
+  height: 40%;
+  width: 90%;
 }
 
 /* Footer */
@@ -900,7 +997,7 @@ footer {
     box-shadow: rgba(95, 93, 93, 0.639) 0px 10px 5px 5px inset;
   }
 
-  .md\:hover\:white-shadow-effect:hover:hover {
+  .md\:hover\:white-shadow-effect:hover {
     box-shadow:
             rgba(95, 93, 93, 0.639) 0px -10px 0px 5px inset,
             rgba(255, 255, 255, 0.9) 0px 0px 1px 2px,

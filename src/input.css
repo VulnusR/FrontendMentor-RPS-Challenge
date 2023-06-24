@@ -20,10 +20,6 @@
         via-gray-800
     }
 
-    .bg-btn {
-        @apply bg-yellow-400
-    }
-
     /* header components */
 
     .header-font {
@@ -123,7 +119,7 @@
     }
 
     /* Main Components */
-
+    /* Game Page (Main Subsection) */
     /* Triangle Bg control */
     .game-bg-div {
         width: 225px;
@@ -291,7 +287,7 @@
             rgba(255, 255, 255, 0.3) 0px 0px 32px 75px
     }
 
-    .white-shadow-effect:hover {
+    .white-shadow-effect {
         box-shadow:
             rgba(95, 93, 93, 0.639) 0px -10px 0px 5px inset,
             rgba(255, 255, 255, 0.9) 0px 0px 1px 2px,
@@ -300,6 +296,92 @@
             rgba(255, 255, 255, 0.45) 0px 0px 40px 75px,
             rgba(255, 255, 255, 0.3) 0px 0px 100px 100px
     }
+
+    /* Results Section (main subsection) */
+    /* Fonts */
+
+    .results-overhead-text {
+        @apply
+        font-sans
+        font-bold
+        text-white
+        text-2xl
+    }
+
+    .md-results-overhead-text {
+        @apply
+        font-sans
+        font-bold
+        text-white
+        text-2xl
+    }
+
+    .lg-results-overhead-text {
+        @apply
+        font-sans
+        font-bold
+        text-white
+        text-2xl
+    }
+
+    .xl-results-overhead-text {
+        @apply
+        font-sans
+        font-bold
+        text-white
+        text-2xl
+    }
+
+    #results-lower-center-text {
+        @apply
+        font-sans
+        font-bold
+        text-white
+        text-2xl
+    }
+
+    #md-results-lower-center-text {
+        @apply
+        font-sans
+        font-bold
+        text-white
+        text-2xl
+    }
+
+    #lg-results-lower-center-text {
+        @apply
+        font-sans
+        font-bold
+        text-white
+        text-2xl
+    }
+
+    #xl-results-lower-center-text {
+        @apply
+        font-sans
+        font-bold
+        text-white
+        text-2xl
+    }
+
+    /* Results Componets */
+
+    #results-btn {
+        border: rgb(32, 114, 196) 2px solid;
+        border-radius: 2rem;
+        padding: 1%;
+        margin: 1%;
+    
+        background-color: rgb(203, 203, 203);
+    
+        color: rgba(255, 255, 255, 0);
+    
+        height: 55%;
+        min-width: 115px;
+        width: 10%;
+    }
+
+
 }
 
 /*Default CSS */
@@ -309,12 +391,6 @@ body {
     width: 100vw;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.invisible {
-    display: none;
-    height: 0vh;
-    width: 0vw;
 }
 
 /* Header */
@@ -408,6 +484,7 @@ main {
     align-items: center;
 }
 
+/* Round Start (Main Subsection) */
 .game-upper-parent {
     height: 20%;
     display: flex;
@@ -427,6 +504,51 @@ main {
     justify-content: center;
     align-items: center;
     overflow: visible;
+}
+
+/* Round Results (Main Subsection) */
+
+.results-parent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.results-side-parent {
+    height: 100%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.results-side-upper {
+    height: 15%;
+    width: 100%;
+
+
+}
+
+
+
+.results-side-lower {
+    height: 85%;
+    width: 100%;
+
+}
+
+.results-center-parent {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.results-center-container {
+    height: 40%;
+    width: 90%;
 }
 
 /* Footer */

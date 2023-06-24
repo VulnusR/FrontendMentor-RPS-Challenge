@@ -51,11 +51,11 @@
 
   </header>
   <main>
-    <div class="main-content-parent">
-      <div id="round-start"  class="game-main-parent">
+    <div id="page-parent" class="main-content-parent">
+      <article id="round-start"  class="game-main-parent">
         <div class="game-bg-div md:md-game-bg-div lg:lg-game-bg-div xl:xl-game-bg-div">
           <div class="relative game-upper-parent md:md-game-upper-parent lg:lg-game-upper-parent xl:xl-game-upper-parent">
-            <button id="btn-paper" type="button" class="btn-game absolute -bottom-5 -left-7 main-game-btn bg-blue-400 hover:bg-sky-400 hover:sm-white-shadow-effect md:md-main-game-btn md:-bottom-8 md:-left-10 md:hover:white-shadow-effect lg:lg-main-game-btn lg:-bottom-11 lg-left-13 xl:xl-main-game-btn">
+            <button id="btn-paper" type="button" class="btn-game absolute -bottom-5 -left-7 main-game-btn bg-blue-400  hover:bg-sky-400 hover:sm-white-shadow-effect md:md-main-game-btn md:-bottom-8 md:-left-10 md:hover:white-shadow-effect lg:lg-main-game-btn lg:-bottom-11 lg-left-13 xl:xl-main-game-btn">
               <div class="game-btn-inner bg-white md:md-game-btn-inner lg:lg-game-btn-inner xl:xl-game-btn-inner">
                 <img src="./images/icon-paper.svg" alt="Paper Icon for RPS" />
               </div>
@@ -74,10 +74,44 @@
             </button>
           </div>
         </div>
-      </div>
-      <div id="round-results" class="game-main-parent">
+      </article>
 
-      </div>
+      <article id="round-results" class="game-main-parent">
+        <div class="results-parent">
+          <div class="results-side-parent">
+            <div class="results-side-upper">
+              <h3 class="results-overhead-text">You Picked</h3>
+            </div>
+            <div class="results-side-lower"></div>
+          </div>
+
+          <div class="results-center-parent">
+            <div class="results-center-container">
+              <h2 id="results-lower-center-text">Dynamic Text</h2>
+            </div>
+            <div class="results-center-container">
+              <button id="results-btn"type="button">New Round!</button>
+            </div>
+          </div>
+
+
+          <div class="results-side-parent">
+            <div class="results-side-upper">
+              <h3 class="results-overhead-text">
+                The House Picked!
+              </h3>
+            </div>
+            <div class="results-side-lower"></div>
+
+          </div>
+          
+            
+          
+        </div>
+
+        
+
+      </article>
 
 
 

@@ -3,7 +3,6 @@ const r = document.getElementById('btn-rock');
 const p = document.getElementById('btn-paper');
 const s = document.getElementById('btn-scissors');
 
-
 //RPS GAME LOGIC
 //Logs the btn chosen by user
 let userChoice = '';
@@ -61,14 +60,22 @@ function updateScore(newScore) {
     document.getElementById('score').textContent = score;
 }
 
-//////
-function endGameRound(userChoice, computerChoice, gameResult) {
-    //Targets the New Round HTML & Hides it
-    let gameScreen = document.querySelector('#round-start');
-    gameScreen.classList.add('invisible');
 
-   
+let mainPage = document.querySelector('#page-parent');
+let roundStart = document.querySelector('#round-start');
+let roundResults = document.querySelector('#round-results');
+
+//Elements Not In DOM, Ready to be inserted
+roundResults.remove();
+
+function endGameRound() {
+    roundStart.remove();
+    mainPage.appendChild(roundResults);
 }
+
+
+
+
 
 ///  let playerChoiceElement = document.getElementById('playerChoice');
 //let computerChoiceElement = document.getElementById('computerChoice');
