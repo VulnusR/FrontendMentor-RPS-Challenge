@@ -18,7 +18,26 @@ gameBtn.forEach(button => {
         let computerChoice = choices[Math.floor(Math.random() * 3)];
         console.log(`Computer chose: ${computerChoice}`);
 
+        let gameResult = getGameResult(userChoice, computerChoice);
+        console.log(`Game result: ${gameResult}`);
+
     });
 });
+
+function getGameResult(user, computer) {
+    if (user === computer) {
+        return 'draw';
+    } 
+    
+    else if ((user === 'r' && computer === 'p') || (user === 'p' && computer === 's') || (user === 's' && computer === 'r')) {
+        return 'lose';
+    } 
+    
+    else {
+        return 'win';
+    }
+}
+
+
 
 
