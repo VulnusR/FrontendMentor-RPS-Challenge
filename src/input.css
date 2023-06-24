@@ -381,7 +381,17 @@
         width: 10%;
     }
 
+     /*Shadow Effects */
 
+     .result-sm-white-shadow-effect {
+        box-shadow:
+            rgba(95, 93, 93, 0.639) 0px -5px 0px 5px inset,
+            rgba(255, 255, 255, 0.9) 0px 0px 1px 2px,
+            rgba(255, 255, 255, 0.75) 0px 0px 4px 10px,
+            rgba(255, 255, 255, 0.6) 0px 0px 8px 20px,
+            rgba(255, 255, 255, 0.45) 0px 0px 16px 35px,
+            rgba(255, 255, 255, 0.3) 0px 0px 32px 50px
+    }
 }
 
 /*Default CSS */
@@ -526,14 +536,20 @@ main {
     height: 15%;
     width: 100%;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    text-align: center;
 }
-
-
 
 .results-side-lower {
     height: 85%;
     width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -549,6 +565,12 @@ main {
 .results-center-container {
     height: 40%;
     width: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
 }
 
 /* Footer */

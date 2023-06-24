@@ -68,31 +68,79 @@ let roundResults = document.querySelector('#round-results');
 //Elements Not In DOM, Ready to be inserted
 roundResults.remove();
 
-function endGameRound() {
+function endGameRound(userChoice, computerChoice, gameResult) {
+    //clears the DOM of the Game page HTML & Replaces it with the Results Page
     roundStart.remove();
     mainPage.appendChild(roundResults);
+
+    // Replaces the results dynamic text based on game results
+    let resultTextElement = document.getElementById('results-lower-center-text');
+
+    console.log('Game result:', gameResult); // add this line
+
+    if (gameResult === 'win') {
+        resultTextElement.innerText = "You Win!";
+    } else if (gameResult === 'lose') {
+        resultTextElement.innerText = "You   Lose!";
+    } else if (gameResult === 'draw') {
+        resultTextElement.innerText = "Draw!";
+    }
+
+     // Generate HTML for user's choice and computer's choice
+     let userChoiceHTML = generateChoiceHTML(userChoice);
+     let compChoiceHTML = generateChoiceHTML(computerChoice);
+
+     let userChoiceDisplay = document.querySelector('#results-user-choice');
+     let compChoiceDisplay = document.querySelector('#results-comp-choice');
+ 
+     // Add choices to the display
+     userChoiceDisplay.innerHTML = userChoiceHTML;
+     compChoiceDisplay.innerHTML = compChoiceHTML;
 }
 
+//Mostly pointless but used for img Alts on results section
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+//Dynamically Generates html elements for results page based on user and computer choices on the game page. function called by choice select/btn press on game page, but techincally called by endGameRound function.
+function generateChoiceHTML(choice) {
+    //Sets color of outer ring
+    let colorClass = "";
+    //Used to find Icon in filesystem
+    let resultsIcon = "";
+
+    //translates results into usable strings for html
+    switch (choice) {
+        case "r":
+            colorClass = "bg-red-600 hover:bg-rose-600",
+            resultsIcon = "rock";
+            break;
+        case "p":
+            colorClass = "bg-blue-400 hover:bg-sky-400",
+            resultsIcon = "paper";
+            break;
+        case "s":
+            colorClass = "bg-yellow-400 hover:bg-amber-450",
+            resultsIcon = "scissors";
+            break;
+    }
+
+    console.log({choice})
+
+    //Generates Html
+    return `
+        <div id="display-${choice}" class="btn-game ${colorClass} main-game-btn result-sm-white-shadow-effect md:md-main-game-btn md:white-shadow-effect lg:lg-main-game-btn lg:white-shadow-effect xl:white-shadow-effect xl:xl-main-game-btn">
+            <div class="game-btn-inner bg-white md:md-game-btn-inner lg:lg-game-btn-inner xl:xl-game-btn-inner">
+                <img src="./images/icon-${resultsIcon}.svg" alt="${capitalizeFirstLetter(choice)} Icon for RPS" />
+            </div>
+        </div>
+    `;
+}
+
+ 
 
 
 
 
-///  let playerChoiceElement = document.getElementById('playerChoice');
-//let computerChoiceElement = document.getElementById('computerChoice');
-//let gameOutcomeElement = document.getElementById('gameOutcome');
-
-//playerChoiceElement.innerHTML = `<button class="btn-game btn-${userChoice}">...</button>`;
-//computerChoiceElement.innerHTML = `<button class="btn-game btn-${computerChoice}">...</button>`;
-//gameOutcomeElement.textContent = gameResult === 'win' ? 'You win!' : gameResult === 'lose' ? 'You lose!' : 'Draw';
-
-// Show the game results and hide the original buttons
-//document.getElementById('gameResults').classList.remove('hidden');
-//document.getElementById('originalButtons').classList.add('hidden');
-
-// Add an event listener to the play again button
-//document.getElementById('playAgain').addEventListener('click', function() {
-    // Hide the game results and show the original buttons
-    //document.getElementById('gameResults').classList.add('hidden');
-    //document.getElementById('originalButtons').classList.remove('hidden');
-//});
 
