@@ -60,13 +60,13 @@ function updateScore(newScore) {
     document.getElementById('score').textContent = score;
 }
 
-
 let mainPage = document.querySelector('#page-parent');
 let roundStart = document.querySelector('#round-start');
 let roundResults = document.querySelector('#round-results');
 
 //Elements Not In DOM, Ready to be inserted
 roundResults.remove();
+
 
 function endGameRound(userChoice, computerChoice, gameResult) {
     //clears the DOM of the Game page HTML & Replaces it with the Results Page
@@ -76,7 +76,15 @@ function endGameRound(userChoice, computerChoice, gameResult) {
     // Replaces the results dynamic text based on game results
     let resultTextElement = document.getElementById('results-lower-center-text');
 
-    console.log('Game result:', gameResult); // add this line
+    console.log('Game result:', gameResult); 
+
+    // The newRoundButton **MUST** be contained in the endGameRound function because if placed outside the function there is an async between the roundResults section of the DOM loading, and even if the roundResults is loaded, the newRoundButton will have tried to load the DOM prior to the insertion of the roundResults HTML. Meaning that the #results-btn will never be found and thus the user will be stuck on the results page with no way to return to the game page.
+    let newRoundButton = document.querySelector('#results-btn');
+
+    newRoundButton.addEventListener('click', function() {
+        roundResults.remove();
+        mainPage.appendChild(roundStart);
+    });
 
     if (gameResult === 'win') {
         resultTextElement.innerText = "You Win!";
@@ -137,6 +145,9 @@ function generateChoiceHTML(choice) {
         </div>
     `;
 }
+
+
+
 
  
 
