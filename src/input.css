@@ -7,10 +7,10 @@
     /* Global */
     .bg-primary {
         @apply 
-        bg-gradient-to-br 
-        from-red-300 
-        to-blue-400 
-        via-gray-300;
+        bg-gradient-to-b
+        from-sky-500 from-10%
+        via-blue-700 via-30%
+        to-indigo-900 to-60%
     }
 
     .bg-dark {
@@ -278,6 +278,28 @@
         box-shadow: rgba(95, 93, 93, 0.639) 0px 10px 5px 5px inset;
     
     }
+
+    /*Shadow Effects */
+
+    .sm-white-shadow-effect {
+        box-shadow:
+            rgba(95, 93, 93, 0.639) 0px -5px 0px 5px inset,
+            rgba(255, 255, 255, 0.9) 0px 0px 1px 2px,
+            rgba(255, 255, 255, 0.75) 0px 0px 4px 15px,
+            rgba(255, 255, 255, 0.6) 0px 0px 8px 25px,
+            rgba(255, 255, 255, 0.45) 0px 0px 16px 40px,
+            rgba(255, 255, 255, 0.3) 0px 0px 32px 75px
+    }
+
+    .white-shadow-effect:hover {
+        box-shadow:
+            rgba(95, 93, 93, 0.639) 0px -10px 0px 5px inset,
+            rgba(255, 255, 255, 0.9) 0px 0px 1px 2px,
+            rgba(255, 255, 255, 0.75) 0px 0px 7px 5px,
+            rgba(255, 255, 255, 0.6) 0px 0px 20px 25px,
+            rgba(255, 255, 255, 0.45) 0px 0px 40px 75px,
+            rgba(255, 255, 255, 0.3) 0px 0px 100px 100px
+    }
 }
 
 body {
@@ -387,6 +409,8 @@ main {
     align-items: center;
     overflow: visible;
 }
+
+
 
 .game-lower-parent {
     margin-top: 50%;

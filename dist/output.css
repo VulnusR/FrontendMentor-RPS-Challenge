@@ -525,13 +525,16 @@ video {
 /* Global */
 
 .bg-primary {
-  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
-  --tw-gradient-from: #fca5a5 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(252 165 165 / 0) var(--tw-gradient-to-position);
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: #0ea5e9 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(14 165 233 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: rgb(209 213 219 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #d1d5db var(--tw-gradient-via-position), var(--tw-gradient-to);
-  --tw-gradient-to: #60a5fa var(--tw-gradient-to-position);
+  --tw-gradient-from-position: 10%;
+  --tw-gradient-to: rgb(29 78 216 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #1d4ed8 var(--tw-gradient-via-position), var(--tw-gradient-to);
+  --tw-gradient-via-position: 30%;
+  --tw-gradient-to: #312e81 var(--tw-gradient-to-position);
+  --tw-gradient-to-position: 60%;
 }
 
 /* header components */
@@ -602,6 +605,8 @@ video {
   box-shadow: rgb(95, 93, 93) 0px 5px 5px 3px inset;
 }
 
+/*Shadow Effects */
+
 .absolute {
   position: absolute;
 }
@@ -610,32 +615,16 @@ video {
   position: relative;
 }
 
+.-bottom-5 {
+  bottom: -1.25rem;
+}
+
 .-left-7 {
   left: -1.75rem;
 }
 
 .-right-7 {
   right: -1.75rem;
-}
-
-.bottom-0 {
-  bottom: 0px;
-}
-
-.-bottom-1 {
-  bottom: -0.25rem;
-}
-
-.-bottom-2 {
-  bottom: -0.5rem;
-}
-
-.-bottom-3 {
-  bottom: -0.75rem;
-}
-
-.-bottom-5 {
-  bottom: -1.25rem;
 }
 
 .flex {
@@ -672,16 +661,8 @@ video {
   background-color: rgb(250 204 21 / var(--tw-bg-opacity));
 }
 
-.font-medium {
-  font-weight: 500;
-}
-
 .font-semibold {
   font-weight: 600;
-}
-
-.tracking-wide {
-  letter-spacing: 0.025em;
 }
 
 .tracking-wider {
@@ -820,6 +801,16 @@ footer {
   width: 10%;
 }
 
+.hover\:sm-white-shadow-effect:hover {
+  box-shadow:
+            rgba(95, 93, 93, 0.639) 0px -5px 0px 5px inset,
+            rgba(255, 255, 255, 0.9) 0px 0px 1px 2px,
+            rgba(255, 255, 255, 0.75) 0px 0px 4px 15px,
+            rgba(255, 255, 255, 0.6) 0px 0px 8px 25px,
+            rgba(255, 255, 255, 0.45) 0px 0px 16px 40px,
+            rgba(255, 255, 255, 0.3) 0px 0px 32px 75px
+}
+
 @media (prefers-color-scheme: dark) {
   .dark\:bg-dark {
     background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
@@ -889,6 +880,16 @@ footer {
     align-items: center;
     justify-content: center;
     box-shadow: rgba(95, 93, 93, 0.639) 0px 10px 5px 5px inset;
+  }
+
+  .md\:hover\:white-shadow-effect:hover:hover {
+    box-shadow:
+            rgba(95, 93, 93, 0.639) 0px -10px 0px 5px inset,
+            rgba(255, 255, 255, 0.9) 0px 0px 1px 2px,
+            rgba(255, 255, 255, 0.75) 0px 0px 7px 5px,
+            rgba(255, 255, 255, 0.6) 0px 0px 20px 25px,
+            rgba(255, 255, 255, 0.45) 0px 0px 40px 75px,
+            rgba(255, 255, 255, 0.3) 0px 0px 100px 100px
   }
 }
 
@@ -1010,37 +1011,19 @@ footer {
   }
 }
 
+.hover\:bg-rose-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(225 29 72 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-sky-400:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(56 189 248 / var(--tw-bg-opacity));
+}
+
 @media (min-width: 768px) {
-  .md\:-bottom-5 {
-    bottom: -1.25rem;
-  }
-
-  .md\:-left-8 {
-    left: -2rem;
-  }
-
-  .md\:-right-8 {
-    right: -2rem;
-  }
-
   .md\:-bottom-8 {
     bottom: -2rem;
-  }
-
-  .md\:-bottom-9 {
-    bottom: -2.25rem;
-  }
-
-  .md\:-bottom-14 {
-    bottom: -3.5rem;
-  }
-
-  .md\:-left-9 {
-    left: -2.25rem;
-  }
-
-  .md\:-right-9 {
-    right: -2.25rem;
   }
 
   .md\:-left-10 {
@@ -1058,17 +1041,9 @@ footer {
   .md\:font-normal {
     font-weight: 400;
   }
-
-  .md\:tracking-normal {
-    letter-spacing: 0em;
-  }
 }
 
 @media (min-width: 1366px) {
-  .lg\:-bottom-10 {
-    bottom: -2.5rem;
-  }
-
   .lg\:-bottom-11 {
     bottom: -2.75rem;
   }
