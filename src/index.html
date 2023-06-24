@@ -43,7 +43,7 @@
         <div class="scorebox-text score-font md:md-score-font lg:lg-score-font xl:xl-score-font">
           Score
         </div>
-        <div class="scorebox-tally score-font-tally md:md-score-font-tally lg:lg-score-font-tally xl:xl-score-font-tally">
+        <div id="score" class="scorebox-tally score-font-tally md:md-score-font-tally lg:lg-score-font-tally xl:xl-score-font-tally">
           115
         </div>
       </div>
@@ -57,7 +57,7 @@
           <div class="relative game-upper-parent md:md-game-upper-parent lg:lg-game-upper-parent xl:xl-game-upper-parent">
 
 
-            <button type="button" class="absolute -bottom-5 -left-7 main-game-btn bg-blue-400 hover:bg-sky-400 hover:sm-white-shadow-effect md:md-main-game-btn md:-bottom-8 md:-left-10 md:hover:white-shadow-effect lg:lg-main-game-btn lg:-bottom-11 lg-left-13 xl:xl-main-game-btn">
+            <button id="btn-paper" type="button" class="btn-game absolute -bottom-5 -left-7 main-game-btn bg-blue-400 hover:bg-sky-400 hover:sm-white-shadow-effect md:md-main-game-btn md:-bottom-8 md:-left-10 md:hover:white-shadow-effect lg:lg-main-game-btn lg:-bottom-11 lg-left-13 xl:xl-main-game-btn">
               <div class="game-btn-inner bg-white md:md-game-btn-inner lg:lg-game-btn-inner xl:xl-game-btn-inner">
                 <img src="./images/icon-paper.svg" alt="Paper Icon for RPS" />
               </div>
@@ -65,7 +65,7 @@
 
             </button>
 
-            <button type="button" class="absolute -bottom-5 -right-7 main-game-btn bg-yellow-400 hover:bg-amber-450 hover:sm-white-shadow-effect md:md-main-game-btn md:-bottom-8 md:-right-10 md:hover:white-shadow-effect lg:lg-main-game-btn lg:-bottom-11 lg-right-13 xl:xl-main-game-btn">
+            <button id="btn-scissors" type="button" class="btn-game absolute -bottom-5 -right-7 main-game-btn bg-yellow-400 hover:bg-amber-450 hover:sm-white-shadow-effect md:md-main-game-btn md:-bottom-8 md:-right-10 md:hover:white-shadow-effect lg:lg-main-game-btn lg:-bottom-11 lg-right-13 xl:xl-main-game-btn">
               <div class="game-btn-inner md:md-game-btn-inner lg:lg-game-btn-inner xl:xl-game-btn-inner bg-white">
                 <img src="./images/icon-scissors.svg" alt="Scissors Icon for RPS" />
               </div>
@@ -80,7 +80,7 @@
 
           </div>
           <div class="game-lower-parent">
-            <button type="button" class="main-game-btn bg-red-600 hover:bg-rose-600 hover:sm-white-shadow-effect md:md-main-game-btn md:hover:white-shadow-effect lg:lg-main-game-btn xl:xl-main-game-btn">
+            <button id="btn-rock" type="button" class="btn-game main-game-btn bg-red-600 hover:bg-rose-600 hover:sm-white-shadow-effect md:md-main-game-btn md:hover:white-shadow-effect lg:lg-main-game-btn xl:xl-main-game-btn">
               <div class="game-btn-inner md:md-game-btn-inner lg:lg-game-btn-inner xl:xl-game-btn-inner bg-white">
                   <img src="./images/icon-rock.svg" alt="Rock Icon for RPS" />
               </div>
@@ -103,4 +103,5 @@
   </footer>
 
 </body>
+<script src="./script.js"></script>
 </html>
