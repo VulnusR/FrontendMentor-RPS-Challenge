@@ -302,11 +302,19 @@
     }
 }
 
+/*Default CSS */
+/* Global */
 body {
     height: 100vh;
     width: 100vw;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.invisible {
+    display: none;
+    height: 0vh;
+    width: 0vw;
 }
 
 /* Header */

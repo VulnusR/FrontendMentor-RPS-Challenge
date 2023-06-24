@@ -31,6 +31,7 @@ gameBtn.forEach(button => {
             updateScore(score - 1);
         }
 
+        endGameRound(userChoice, computerChoice, gameResult);
     });
 });
 
@@ -59,3 +60,32 @@ function updateScore(newScore) {
     localStorage.setItem('score', score);
     document.getElementById('score').textContent = score;
 }
+
+//////
+function endGameRound(userChoice, computerChoice, gameResult) {
+    //Targets the New Round HTML & Hides it
+    let gameScreen = document.querySelector('#round-start');
+    gameScreen.classList.add('invisible');
+
+   
+}
+
+///  let playerChoiceElement = document.getElementById('playerChoice');
+//let computerChoiceElement = document.getElementById('computerChoice');
+//let gameOutcomeElement = document.getElementById('gameOutcome');
+
+//playerChoiceElement.innerHTML = `<button class="btn-game btn-${userChoice}">...</button>`;
+//computerChoiceElement.innerHTML = `<button class="btn-game btn-${computerChoice}">...</button>`;
+//gameOutcomeElement.textContent = gameResult === 'win' ? 'You win!' : gameResult === 'lose' ? 'You lose!' : 'Draw';
+
+// Show the game results and hide the original buttons
+//document.getElementById('gameResults').classList.remove('hidden');
+//document.getElementById('originalButtons').classList.add('hidden');
+
+// Add an event listener to the play again button
+//document.getElementById('playAgain').addEventListener('click', function() {
+    // Hide the game results and show the original buttons
+    //document.getElementById('gameResults').classList.add('hidden');
+    //document.getElementById('originalButtons').classList.remove('hidden');
+//});
+

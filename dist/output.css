@@ -607,6 +607,10 @@ video {
 
 /*Shadow Effects */
 
+.invisible {
+  visibility: hidden;
+}
+
 .absolute {
   position: absolute;
 }
@@ -629,6 +633,10 @@ video {
 
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .justify-center {
@@ -669,11 +677,21 @@ video {
   letter-spacing: 0.05em;
 }
 
+/*Default CSS */
+
+/* Global */
+
 body {
   height: 100vh;
   width: 100vw;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.invisible {
+  display: none;
+  height: 0vh;
+  width: 0vw;
 }
 
 /* Header */
