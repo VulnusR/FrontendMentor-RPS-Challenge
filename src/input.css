@@ -367,20 +367,56 @@
     /* Results Componets */
 
     #results-btn {
-        border: rgb(32, 114, 196) 2px solid;
-        border-radius: 2rem;
+       
+        border: rgb(156, 146, 146) 2px solid;
         padding: 1%;
         margin: 1%;
-    
-        background-color: rgb(203, 203, 203);
-    
-        color: rgba(255, 255, 255, 0);
-        
-    
-        height: 55%;
-        min-width: 115px;
-        width: 10%;
+        background-color: rgba(255, 255, 255, 0.975);
+        box-shadow:
+            rgb(207, 204, 204) 0px 0px 40px 25px inset,
+            rgba(255, 255, 255, 0.9) 0px 0px 10px 1px;
     }
+
+    .results-btn-effects {
+       @apply
+        font-semibold
+        tracking-wider
+        text-sm
+    }
+    .md-results-btn-effects {
+        width: 350px;
+        height: 40%;
+        border-radius: 7rem;
+
+        @apply
+        font-thin
+        tracking-wider
+        text-4xl
+    }
+
+    .lg-results-btn-effects {
+        width: 550px;
+        height: 25%;
+        border-radius: 7rem;
+
+        @apply
+        font-thin
+        tracking-wider
+        text-4xl
+    }
+
+    .xl-results-btn-effects {
+        width: 750px;
+        height: 25%;
+        border-radius: 7rem;
+
+        @apply
+        font-thin
+        tracking-widest
+        text-5xl
+    }
+
+
 
      /*Shadow Effects */
 
@@ -404,27 +440,7 @@ body {
     background-size: cover;
 }
 
-/* Rules Related Styles */
 
-#rules-page {
-
-    display: none;
-    
-    height: 100vh;
-    width: 100vw;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    
-    background: rgba(0,0,0,0.7); /* semi-transparent background to create an overlay effect */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* ensure it displays over other content */
-
-    
-}
 
 /* Header */
 

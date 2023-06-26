@@ -661,15 +661,30 @@ video {
 /* Results Componets */
 
 #results-btn {
-  border: rgb(32, 114, 196) 2px solid;
-  border-radius: 2rem;
+  border: rgb(156, 146, 146) 2px solid;
   padding: 1%;
   margin: 1%;
-  background-color: rgb(203, 203, 203);
-  color: rgba(255, 255, 255, 0);
-  height: 55%;
-  min-width: 115px;
-  width: 10%;
+  background-color: rgba(255, 255, 255, 0.975);
+  box-shadow:
+            rgb(207, 204, 204) 0px 0px 40px 25px inset,
+            rgba(255, 255, 255, 0.9) 0px 0px 10px 1px;
+}
+
+.results-btn-effects {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.md-results-btn-effects {
+  width: 350px;
+  height: 40%;
+  border-radius: 7rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 100;
+  letter-spacing: 0.05em
 }
 
 /*Shadow Effects */
@@ -748,6 +763,11 @@ video {
 
 .tracking-wider {
   letter-spacing: 0.05em;
+}
+
+.text-indigo-900 {
+  --tw-text-opacity: 1;
+  color: rgb(49 46 129 / var(--tw-text-opacity));
 }
 
 .ring {
@@ -1114,6 +1134,16 @@ footer {
             rgba(255, 255, 255, 0.45) 0px 0px 40px 75px,
             rgba(255, 255, 255, 0.3) 0px 0px 100px 100px
   }
+
+  .lg\:lg-results-btn-effects {
+    width: 550px;
+    height: 25%;
+    border-radius: 7rem;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 100;
+    letter-spacing: 0.05em
+  }
 }
 
 @media (min-width: 2500px) {
@@ -1182,6 +1212,16 @@ footer {
             rgba(255, 255, 255, 0.6) 0px 0px 20px 25px,
             rgba(255, 255, 255, 0.45) 0px 0px 40px 75px,
             rgba(255, 255, 255, 0.3) 0px 0px 100px 100px
+  }
+
+  .xl\:xl-results-btn-effects {
+    width: 750px;
+    height: 25%;
+    border-radius: 7rem;
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 100;
+    letter-spacing: 0.1em
   }
 }
 
