@@ -64,8 +64,9 @@ let mainPage = document.querySelector('#page-parent');
 let roundStart = document.querySelector('#round-start');
 let roundResults = document.querySelector('#round-results');
 
-//Elements Not In DOM, Ready to be inserted
+//Element Not In DOM, Ready to be inserted
 roundResults.remove();
+
 
 
 function endGameRound(userChoice, computerChoice, gameResult) {
@@ -104,6 +105,8 @@ function endGameRound(userChoice, computerChoice, gameResult) {
      // Add choices to the display
      userChoiceDisplay.innerHTML = userChoiceHTML;
      compChoiceDisplay.innerHTML = compChoiceHTML;
+
+     currentPage = 'round-results';
 }
 
 //Mostly pointless but used for img Alts on results section
@@ -146,10 +149,54 @@ function generateChoiceHTML(choice) {
     `;
 }
 
+let currentPage = 'round-start'; // This could be 'round-start' or 'round-results'
+let rulesPage = document.querySelector('#rules-page'); // Changed 'rules-page' to '#rules-page'
+let rulesBtn = document.querySelector('#btn-rules'); // Changed 'btn-rules' to '#btn-rules'
+let closeButton = document.querySelector('#btn-close-rules'); // Added this line to select 'close' button
+let footer = document.querySelector('#footer-parent');
+
+rulesPage.remove();
+closeButton.remove();
 
 
 
- 
+
+rulesBtn.addEventListener('click', function() {
+    // Hide current page
+    if (currentPage === 'round-start') {
+        roundStart.remove();
+    } else if (currentPage === 'round-results') {
+        roundResults.remove();
+    }
+
+    
+    rulesBtn.remove()
+    mainPage.appendChild(rulesPage);
+    footer.appendChild(closeButton);
+});
+
+closeButton.addEventListener('click', function() {
+    
+
+    // Show the page the user was on before
+    if (currentPage === 'round-start') {
+        mainPage.appendChild(roundStart);
+    } else if (currentPage === 'round-results') {
+        mainPage.appendChild(roundResults);
+    }
+
+    
+
+    rulesPage.remove()
+    closeButton.remove()
+
+    footer.appendChild(rulesBtn)
+});
+
+
+
+
+   
 
 
 

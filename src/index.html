@@ -31,7 +31,7 @@
 </head>
 
 
-<body class="bg-primary dark:bg-dark">
+<body id="body-full" class="bg-primary dark:bg-dark">
   <header>
     <div class="headerbox">
       <div class="headerbox-title space-y-0">
@@ -52,8 +52,8 @@
   </header>
   <main>
     <div id="page-parent" class="main-content-parent">
-      <article id="round-start"  class="game-main-parent">
-        <div class="game-bg-div md:md-game-bg-div lg:lg-game-bg-div xl:xl-game-bg-div">
+      <article id="round-start"  class="game-main-parent relative">
+        <div class="game-bg-div absolute -bottom-6 -right-5 md:md-game-bg-div lg:lg-game-bg-div xl:xl-game-bg-div">
           <div class="relative game-upper-parent">
             <button id="btn-paper" type="button" class="btn-game absolute -bottom-5 -left-7 main-game-btn bg-blue-400  hover:bg-sky-400 hover:sm-white-shadow-effect md:md-main-game-btn md:-bottom-8 md:-left-10 md:hover:white-shadow-effect lg:lg-main-game-btn lg:-bottom-11 lg-left-13 xl:xl-main-game-btn">
               <div class="game-btn-inner bg-white md:md-game-btn-inner lg:lg-game-btn-inner xl:xl-game-btn-inner">
@@ -124,6 +124,12 @@
         
 
       </article>
+
+      <article id="rules-page" class="">
+        <div class="rules-content-container">
+            <img src="images/image-rules.svg">
+        </div>
+      </article>
       
 
 
@@ -131,10 +137,17 @@
     </div>
   </main>
   <footer>
-    <div class="rules-btn-parent flex justify-center md:justify-end">
-      <button type="button" class="rules-btn font-semibold tracking-wider md:font-normal lg:font-semibold lg:tracking-widest">Rules</button>
+    <div id="footer-parent" class="rules-btn-parent flex justify-center md:justify-end">
+      <button type="button" id="btn-rules" class="rules-btn font-semibold tracking-wider md:font-normal lg:font-semibold lg:tracking-widest">Rules</button>
+      <button type="button" id="btn-close-rules" class="rules-btn font-semibold tracking-wider md:font-normal lg:font-semibold lg:tracking-widest">Close</button>
     </div>
+
+
   </footer>
+
+
+
+
 
 </body>
 <script src="./script.js"></script>
