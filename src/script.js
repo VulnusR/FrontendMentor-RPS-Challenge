@@ -6,7 +6,6 @@ const s = document.getElementById('btn-scissors');
 //RPS GAME LOGIC
 //Logs the btn chosen by user
 let userChoice = '';
-let currentPage = '';
 
 gameBtn.forEach(button => {
     button.addEventListener('click', function() {
@@ -31,15 +30,16 @@ gameBtn.forEach(button => {
             updateScore(score - 1);
         }
         
-        
+        //Generates HTML changes for Results page on event lister, generates the results of the game, & formats the game icons to reflect the results
         endGameRound(userChoice, computerChoice, gameResult);
-        pageSelect()
-        
-        
+
+        //used for generating a page ID
+        pageSelect();
+
+        let pageId = pageSelect();
+        return pageId
     });
 });
-
-console.log(currentPage)
 
 function getGameResult(user, computer) {
     if (user === computer) {
@@ -80,11 +80,10 @@ function endGameRound(userChoice, computerChoice, gameResult) {
     //clears the DOM of the Game page HTML & Replaces it with the Results Page
     roundStart.remove();
     mainPage.appendChild(roundResults);
+    pageSelect()
 
     // Replaces the results dynamic text based on game results
     let resultTextElement = document.getElementById('results-lower-center-text');
-
-    console.log('Game result:', gameResult); 
 
     // The newRoundButton **MUST** be contained in the endGameRound function because if placed outside the function there is an async between the roundResults section of the DOM loading, and even if the roundResults is loaded, the newRoundButton will have tried to load the DOM prior to the insertion of the roundResults HTML. Meaning that the #results-btn will never be found and thus the user will be stuck on the results page with no way to return to the game page.
     let newRoundButton = document.querySelector('#results-btn');
@@ -92,7 +91,6 @@ function endGameRound(userChoice, computerChoice, gameResult) {
     newRoundButton.addEventListener('click', function() {
         roundResults.remove();
         mainPage.appendChild(roundStart);
-        pageSelect()
     });
 
     if (gameResult === 'win') {
@@ -157,7 +155,7 @@ function generateChoiceHTML(choice) {
 
 
 let rulesPage = document.querySelector('#rules-page'); 
-let rulesBtn = document.querySelector('#btn-rules'); 
+let rulesButton = document.querySelector('#btn-rules'); 
 let closeButton = document.querySelector('#btn-close-rules'); 
 let footer = document.querySelector('#footer-parent');
 
@@ -165,34 +163,69 @@ rulesPage.remove();
 closeButton.remove();
 
 
-    let pages = [
-        { id: 1, name: 'round-start', element: roundStart },
-        { id: 2, name: 'round-results', element: roundResults },
-    ];
+let pages = [
+    { id: 1, name: 'round-start', element: roundStart },
+    { id: 2, name: 'round-results', element: roundResults },
+];
     
     
 
-    function pageSelect() {
-        let currentPageId;
-        pages.forEach(page => {
-            // Check if the page's element is in the DOM
-            if (document.body.contains(page.element)) {
-                // If it's in the DOM, update currentPageId
-                currentPageId = page.id;
-            }
-        });
-    
-        if (currentPageId === 1) {
-            console.log("Page ID = 1,", currentPageId);
+function pageSelect() {
+    let currentPageId;
+    pages.forEach(page => {
+        // Check if the page's element is in the DOM
+        if (document.body.contains(page.element)) {
+            // If it's in the DOM, update currentPageId
+            currentPageId = page.id;
         }
+    });
     
-        else if (currentPageId === 2) {
-            console.log("Page ID = 2,", currentPageId);
-        }
+    if (currentPageId === 1) {
+        console.log(currentPageId);
+    }
+    
+    else if (currentPageId === 2) {
+        console.log(currentPageId);
     }
 
-    console.log(pageSelect)
- 
+    return currentPageId;
+}
+
+let pageId;
+
+rulesButton.addEventListener('click', function() {
+    pageId = pageSelect()
+
+    if (pageId === 1 ) {
+        roundStart.remove();
+    } else if (pageId === 2) {
+        roundResults.remove();
+    }
+    console.log(pageId, "rules BTN ")
+
+    rulesButton.remove()
+
+    mainPage.appendChild(rulesPage);
+    footer.appendChild(closeButton);
+});
+
+closeButton.addEventListener('click', function() {
+
+    rulesPage.remove();
+
+    // Show the page the user was on before
+    if (pageId === 1) {
+        mainPage.appendChild(roundStart);
+        
+    } else if (pageId === 2) {
+        mainPage.appendChild(roundResults);
+    }
+
+    closeButton.remove()
+    footer.appendChild(rulesButton);
+});
+
+
 
     
 
