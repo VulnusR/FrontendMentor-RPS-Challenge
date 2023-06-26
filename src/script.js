@@ -6,6 +6,7 @@ const s = document.getElementById('btn-scissors');
 //RPS GAME LOGIC
 //Logs the btn chosen by user
 let userChoice = '';
+let currentPage = '';
 
 gameBtn.forEach(button => {
     button.addEventListener('click', function() {
@@ -29,10 +30,16 @@ gameBtn.forEach(button => {
         } else if (gameResult === 'lose') {
             updateScore(score - 1);
         }
-
+        
+        
         endGameRound(userChoice, computerChoice, gameResult);
+        pageSelect()
+        
+        
     });
 });
+
+console.log(currentPage)
 
 function getGameResult(user, computer) {
     if (user === computer) {
@@ -85,6 +92,7 @@ function endGameRound(userChoice, computerChoice, gameResult) {
     newRoundButton.addEventListener('click', function() {
         roundResults.remove();
         mainPage.appendChild(roundStart);
+        pageSelect()
     });
 
     if (gameResult === 'win') {
@@ -105,8 +113,6 @@ function endGameRound(userChoice, computerChoice, gameResult) {
      // Add choices to the display
      userChoiceDisplay.innerHTML = userChoiceHTML;
      compChoiceDisplay.innerHTML = compChoiceHTML;
-
-     currentPage = 'round-results';
 }
 
 //Mostly pointless but used for img Alts on results section
@@ -149,49 +155,54 @@ function generateChoiceHTML(choice) {
     `;
 }
 
-let currentPage = 'round-start'; // This could be 'round-start' or 'round-results'
-let rulesPage = document.querySelector('#rules-page'); // Changed 'rules-page' to '#rules-page'
-let rulesBtn = document.querySelector('#btn-rules'); // Changed 'btn-rules' to '#btn-rules'
-let closeButton = document.querySelector('#btn-close-rules'); // Added this line to select 'close' button
+
+let rulesPage = document.querySelector('#rules-page'); 
+let rulesBtn = document.querySelector('#btn-rules'); 
+let closeButton = document.querySelector('#btn-close-rules'); 
 let footer = document.querySelector('#footer-parent');
 
 rulesPage.remove();
 closeButton.remove();
 
 
+    let pages = [
+        { id: 1, name: 'round-start', element: roundStart },
+        { id: 2, name: 'round-results', element: roundResults },
+    ];
+    
+    
 
-
-rulesBtn.addEventListener('click', function() {
-    // Hide current page
-    if (currentPage === 'round-start') {
-        roundStart.remove();
-    } else if (currentPage === 'round-results') {
-        roundResults.remove();
+    function pageSelect() {
+        let currentPageId;
+        pages.forEach(page => {
+            // Check if the page's element is in the DOM
+            if (document.body.contains(page.element)) {
+                // If it's in the DOM, update currentPageId
+                currentPageId = page.id;
+            }
+        });
+    
+        if (currentPageId === 1) {
+            console.log("Page ID = 1,", currentPageId);
+        }
+    
+        else if (currentPageId === 2) {
+            console.log("Page ID = 2,", currentPageId);
+        }
     }
 
-    
-    rulesBtn.remove()
-    mainPage.appendChild(rulesPage);
-    footer.appendChild(closeButton);
-});
-
-closeButton.addEventListener('click', function() {
-    
-
-    // Show the page the user was on before
-    if (currentPage === 'round-start') {
-        mainPage.appendChild(roundStart);
-    } else if (currentPage === 'round-results') {
-        mainPage.appendChild(roundResults);
-    }
+    console.log(pageSelect)
+ 
 
     
 
-    rulesPage.remove()
-    closeButton.remove()
 
-    footer.appendChild(rulesBtn)
-});
+
+
+
+
+
+
 
 
 
