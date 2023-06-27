@@ -75,7 +75,7 @@ let roundResults = document.querySelector('#round-results');
 roundResults.remove();
 
 
-
+//End of "round" logic where win/loss status is determined, and new HTML is inserted into the page as a results "page"
 function endGameRound(userChoice, computerChoice, gameResult) {
     //clears the DOM of the Game page HTML & Replaces it with the Results Page
     roundStart.remove();
@@ -168,8 +168,7 @@ let pages = [
     { id: 2, name: 'round-results', element: roundResults },
 ];
     
-    
-
+//Function for finding the ID of each "page"
 function pageSelect() {
     let currentPageId;
     pages.forEach(page => {
@@ -191,8 +190,12 @@ function pageSelect() {
     return currentPageId;
 }
 
+
+
 let pageId;
 
+
+//Logic for rules (and close) button functionality, dependant on the pageSelect function & pageID variable
 rulesButton.addEventListener('click', function() {
     pageId = pageSelect()
 

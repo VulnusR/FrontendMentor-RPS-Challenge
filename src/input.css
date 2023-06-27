@@ -14,14 +14,14 @@
     }
 
     .bg-dark {
-        @apply bg-gradient-to-br
-        from-red-800
-        to-blue-800
-        via-gray-800
+        @apply
+        bg-gradient-to-b
+        from-blue-700 from-10%
+        to-gray-800 via-30%
+        via-blue-900 to-60%
     }
 
     /* header components */
-
     .header-font {
         @apply
         font-sans
@@ -158,125 +158,95 @@
     }
 
     /* Game Buttons */
-
     .main-game-btn {
-
         height: 105px;
         width: 105px;
         border: black 1px solid;
         border-radius: 10rem;
-    
         display: flex;
         align-items: center;
         justify-content: center;
-    
         box-shadow: rgba(5, 5, 5, 0.357) 0px -5px 2px 3px inset;
     }
     
     .md-main-game-btn {
-    
         height: 150px;
         width: 150px;
         border: black 1px solid;
         border-radius: 10rem;
-    
         display: flex;
         align-items: center;
         justify-content: center;
-    
         box-shadow: rgba(95, 93, 93, 0.396) 0px -10px 4px 3px inset;
     }
     
     .lg-main-game-btn {
-    
         height: 225px;
         width: 225px;
         border: black 1px solid;
         border-radius: 10rem;
-    
         display: flex;
         align-items: center;
         justify-content: center;
-    
         box-shadow: rgba(95, 93, 93, 0.396) 0px -12px 2px 8px inset;
     }
     
     .xl-main-game-btn {
-    
         height: 250px;
         width: 250px;
         border: black 1px solid;
         border-radius: 10rem;
-    
         display: flex;
         align-items: center;
         justify-content: center;
-    
         box-shadow: rgba(95, 93, 93, 0.396) 0px -15px 4px 3px inset;
     }
     
     .game-btn-inner {
-    
         height: 75px;
         width: 75px;
         border: black 1px solid;
         border-radius: 10rem;
-    
         display: flex;
         align-items: center;
         justify-content: center;
-    
         box-shadow: rgb(95, 93, 93) 0px 5px 5px 3px inset;
-    
     }
     
     .md-game-btn-inner {
-    
         height: 100px;
         width: 100px;
         border: black 1px solid;
         border-radius: 10rem;
-    
         display: flex;
         align-items: center;
         justify-content: center;
-    
         box-shadow: rgba(95, 93, 93, 0.639) 0px 10px 5px 5px inset;
-    
     }
     
     .lg-game-btn-inner {
-    
         height: 150px;
         width: 150px;
         border: black 1px solid;
         border-radius: 10rem;
-    
         display: flex;
         align-items: center;
         justify-content: center;
-    
         box-shadow: rgba(95, 93, 93, 0.639) 0px 10px 5px 5px inset;
-    
     }
     
     .xl-game-btn-inner {
-    
         height: 175px;
         width: 175px;
         border: black 1px solid;
         border-radius: 10rem;
-    
         display: flex;
         align-items: center;
         justify-content: center;
-    
         box-shadow: rgba(95, 93, 93, 0.639) 0px 10px 5px 5px inset;
-    
     }
 
     /*Shadow Effects */
-
     .sm-white-shadow-effect {
         box-shadow:
             rgba(95, 93, 93, 0.639) 0px -5px 0px 5px inset,
@@ -299,7 +269,6 @@
 
     /* Results Section (main subsection) */
     /* Fonts */
-
     .results-overhead-text {
         @apply
         font-sans
@@ -365,9 +334,7 @@
     }
 
     /* Results Componets */
-
     #results-btn {
-       
         border: rgb(156, 146, 146) 2px solid;
         padding: 1%;
         margin: 1%;
@@ -383,6 +350,7 @@
         tracking-wider
         text-sm
     }
+
     .md-results-btn-effects {
         width: 350px;
         height: 40%;
@@ -415,9 +383,6 @@
         tracking-widest
         text-5xl
     }
-
-
-
      /*Shadow Effects */
 
      .result-sm-white-shadow-effect {
@@ -440,15 +405,11 @@ body {
     background-size: cover;
 }
 
-
-
 /* Header */
-
 header {
     height: 25vh;
     width: 100vw;
     display: flex;
-
     align-content: center;
     justify-content: center;
 }
@@ -456,11 +417,9 @@ header {
 .headerbox {
     height: 75%;
     width: 75%;
-
     display: flex;
     align-self: center;
     justify-self: center;
-
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem;
@@ -480,18 +439,13 @@ header {
 .scorebox-parent {
     height: 100%;
     width:40%;
-
     background-color: white;
     border-radius: 2rem;
-
     display: flex;
     flex-direction: column;
-
     align-items: center;
     justify-items: center;
-
     padding: 2.5%;
-
     overflow: hidden;
 }
 
@@ -507,7 +461,6 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
-    
 }
 
 /* Main */
@@ -572,22 +525,18 @@ main {
 .results-side-upper {
     height: 15%;
     width: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     text-align: center;
 }
 
 .results-side-lower {
     height: 85%;
     width: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .results-center-parent {
@@ -602,16 +551,13 @@ main {
 .results-center-container {
     height: 40%;
     width: 90%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     text-align: center;
 }
 
 /* Footer */
-
 footer {
     height: 10vh;
     width: 100vw;
@@ -620,7 +566,6 @@ footer {
 .rules-btn-parent {
     height: 100%;
     width: 100%;
-
     display: flex;
 }
 
@@ -629,11 +574,8 @@ footer {
     border-radius: 2rem;
     padding: 1%;
     margin: 1%;
-
     background-color: rgba(240, 248, 255, 0);
-
     color: white;
-
     height: 55%;
     min-width: 115px;
     width: 10%;
