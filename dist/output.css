@@ -1,585 +1,1742 @@
 /* TailwindCSS Styles */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@layer components {
 
-    /* Global */
-    .bg-primary {
-        @apply 
-        bg-gradient-to-b
-        from-sky-500 from-10%
-        via-blue-700 via-30%
-        to-indigo-900 to-60%
-    }
+/* ! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com */
 
-    .bg-dark {
-        @apply
-        bg-gradient-to-b
-        from-blue-700 from-10%
-        to-gray-800 via-30%
-        via-blue-900 to-60%
-    }
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
 
-    /* header components */
-    .header-font {
-        @apply
-        font-sans
-        font-bold
-        text-white
-        text-2xl
-    }
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
 
-    .md-header-font {
-        @apply
-        font-sans
-        font-semibold
-        text-white
-        text-4xl
-    }
+::before,
+::after {
+  --tw-content: '';
+}
 
-    .lg-header-font {
-        @apply
-        font-sans
-        font-semibold
-        text-white
-        text-5xl
-    }
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+*/
 
-    .xl-header-font {
-        @apply
-        font-sans
-        text-white
-        text-6xl
-    }
+html {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: Graphik, sans-serif;
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+}
 
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
 
-    /* note: text-base is the "default" or "base" size */
-    .score-font {
-        @apply
-        font-medium
-        text-blue-700
-        text-base
-        tracking-wider
-    }
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
 
-    .md-score-font {
-        @apply
-        font-thin
-        text-blue-700
-        text-2xl
-        tracking-wide
-    }
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
 
-    .lg-score-font {
-        @apply
-        text-blue-700
-        text-3xl
-        tracking-wide
-    }
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
 
-    .xl-score-font {
-        @apply
-        font-medium
-        text-blue-700
-        text-3xl
-        tracking-wider
-    }
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
 
-    .score-font-tally {
-        @apply
-        font-extrabold
-        text-stone-600
-        text-3xl
-        tracking-tighter
-    }
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
 
-    .md-score-font-tally {
-        @apply
-        font-extrabold
-        text-stone-600
-        text-6xl
-        tracking-tighter
-    }
+/*
+Remove the default font size and weight for headings.
+*/
 
-    .lg-score-font-tally {
-        @apply
-        font-extrabold
-        text-stone-600
-        text-7xl
-        tracking-tighter
-    }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
 
-    .xl-score-font-tally {
-        @apply
-        font-black
-        text-stone-600
-        text-8xl
-        tracking-tighter
-    }
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
 
-    /* Main Components */
-    /* Game Page (Main Subsection) */
-    /* Triangle Bg control */
-    .game-bg-div {
-        width: 225px;
-        height: 200px;
-        background-image: url('../src/images/bg-triangle.svg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        overflow: visible;
-    }
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
 
-    .md-game-bg-div {
-        width: 375px;
-        height: 335px;
-        background-image: url('../src/images/bg-triangle.svg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        overflow: visible;
-    }
+/*
+Add the correct font weight in Edge and Safari.
+*/
 
-    .lg-game-bg-div {
-        width: 555px;
-        height: 495px;
-        background-image: url('../src/images/bg-triangle.svg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        overflow: visible;
-    }
+b,
+strong {
+  font-weight: bolder;
+}
 
-    .xl-game-bg-div {
-        width: 775px;
-        height: 690px;
-        background-image: url('../src/images/bg-triangle.svg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        overflow: visible;
-    }
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
 
-    /* Game Buttons */
-    .main-game-btn {
-        height: 105px;
-        width: 105px;
-        border: black 1px solid;
-        border-radius: 10rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: rgba(5, 5, 5, 0.357) 0px -5px 2px 3px inset;
-    }
-    
-    .md-main-game-btn {
-        height: 150px;
-        width: 150px;
-        border: black 1px solid;
-        border-radius: 10rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: rgba(95, 93, 93, 0.396) 0px -10px 4px 3px inset;
-    }
-    
-    .lg-main-game-btn {
-        height: 225px;
-        width: 225px;
-        border: black 1px solid;
-        border-radius: 10rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: rgba(95, 93, 93, 0.396) 0px -12px 2px 8px inset;
-    }
-    
-    .xl-main-game-btn {
-        height: 250px;
-        width: 250px;
-        border: black 1px solid;
-        border-radius: 10rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: rgba(95, 93, 93, 0.396) 0px -15px 4px 3px inset;
-    }
-    
-    .game-btn-inner {
-        height: 75px;
-        width: 75px;
-        border: black 1px solid;
-        border-radius: 10rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: rgb(95, 93, 93) 0px 5px 5px 3px inset;
-    }
-    
-    .md-game-btn-inner {
-        height: 100px;
-        width: 100px;
-        border: black 1px solid;
-        border-radius: 10rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: rgba(95, 93, 93, 0.639) 0px 10px 5px 5px inset;
-    }
-    
-    .lg-game-btn-inner {
-        height: 150px;
-        width: 150px;
-        border: black 1px solid;
-        border-radius: 10rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: rgba(95, 93, 93, 0.639) 0px 10px 5px 5px inset;
-    }
-    
-    .xl-game-btn-inner {
-        height: 175px;
-        width: 175px;
-        border: black 1px solid;
-        border-radius: 10rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: rgba(95, 93, 93, 0.639) 0px 10px 5px 5px inset;
-    }
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
 
-    /*Shadow Effects */
-    .sm-white-shadow-effect {
-        box-shadow:
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+/* Global */
+
+.bg-primary {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: #0ea5e9 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(14 165 233 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-from-position: 10%;
+  --tw-gradient-to: rgb(29 78 216 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #1d4ed8 var(--tw-gradient-via-position), var(--tw-gradient-to);
+  --tw-gradient-via-position: 30%;
+  --tw-gradient-to: #312e81 var(--tw-gradient-to-position);
+  --tw-gradient-to-position: 60%;
+}
+
+.bg-dark {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: #1d4ed8 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(29 78 216 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-from-position: 10%;
+  --tw-gradient-to: rgb(30 58 138 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #1e3a8a var(--tw-gradient-via-position), var(--tw-gradient-to);
+  --tw-gradient-via-position: 30%;
+  --tw-gradient-to: #1f2937 var(--tw-gradient-to-position);
+  --tw-gradient-to-position: 60%;
+}
+
+/* header components */
+
+.header-font {
+  font-family: Graphik, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.md-header-font {
+  font-family: Graphik, sans-serif;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.lg-header-font {
+  font-family: Graphik, sans-serif;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.xl-header-font {
+  font-family: Graphik, sans-serif;
+  font-size: 3.75rem;
+  line-height: 1;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+/* note: text-base is the "default" or "base" size */
+
+.score-font {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
+.md-score-font {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 100;
+  letter-spacing: 0.025em;
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
+.lg-score-font {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  letter-spacing: 0.025em;
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
+.xl-score-font {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
+.score-font-tally {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  --tw-text-opacity: 1;
+  color: rgb(87 83 78 / var(--tw-text-opacity));
+}
+
+.md-score-font-tally {
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  --tw-text-opacity: 1;
+  color: rgb(87 83 78 / var(--tw-text-opacity));
+}
+
+.lg-score-font-tally {
+  font-size: 4.5rem;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  --tw-text-opacity: 1;
+  color: rgb(87 83 78 / var(--tw-text-opacity));
+}
+
+.xl-score-font-tally {
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  --tw-text-opacity: 1;
+  color: rgb(87 83 78 / var(--tw-text-opacity));
+}
+
+/* Main Components */
+
+/* Game Page (Main Subsection) */
+
+/* Triangle Bg control */
+
+.game-bg-div {
+  width: 225px;
+  height: 200px;
+  background-image: url('../src/images/bg-triangle.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: visible;
+}
+
+.md-game-bg-div {
+  width: 375px;
+  height: 335px;
+  background-image: url('../src/images/bg-triangle.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: visible;
+}
+
+.lg-game-bg-div {
+  width: 555px;
+  height: 495px;
+  background-image: url('../src/images/bg-triangle.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: visible;
+}
+
+.xl-game-bg-div {
+  width: 775px;
+  height: 690px;
+  background-image: url('../src/images/bg-triangle.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: visible;
+}
+
+/* Game Buttons */
+
+.main-game-btn {
+  height: 105px;
+  width: 105px;
+  border: black 1px solid;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(5, 5, 5, 0.357) 0px -5px 2px 3px inset;
+}
+
+.md-main-game-btn {
+  height: 150px;
+  width: 150px;
+  border: black 1px solid;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(95, 93, 93, 0.396) 0px -10px 4px 3px inset;
+}
+
+.lg-main-game-btn {
+  height: 225px;
+  width: 225px;
+  border: black 1px solid;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(95, 93, 93, 0.396) 0px -12px 2px 8px inset;
+}
+
+.xl-main-game-btn {
+  height: 250px;
+  width: 250px;
+  border: black 1px solid;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(95, 93, 93, 0.396) 0px -15px 4px 3px inset;
+}
+
+.game-btn-inner {
+  height: 75px;
+  width: 75px;
+  border: black 1px solid;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgb(95, 93, 93) 0px 5px 5px 3px inset;
+}
+
+.md-game-btn-inner {
+  height: 100px;
+  width: 100px;
+  border: black 1px solid;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(95, 93, 93, 0.639) 0px 10px 5px 5px inset;
+}
+
+.lg-game-btn-inner {
+  height: 150px;
+  width: 150px;
+  border: black 1px solid;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(95, 93, 93, 0.639) 0px 10px 5px 5px inset;
+}
+
+.xl-game-btn-inner {
+  height: 175px;
+  width: 175px;
+  border: black 1px solid;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(95, 93, 93, 0.639) 0px 10px 5px 5px inset;
+}
+
+/*Shadow Effects */
+
+.sm-white-shadow-effect {
+  box-shadow:
             rgba(95, 93, 93, 0.639) 0px -5px 0px 5px inset,
             rgba(255, 255, 255, 0.9) 0px 0px 1px 2px,
             rgba(255, 255, 255, 0.75) 0px 0px 4px 15px,
             rgba(255, 255, 255, 0.6) 0px 0px 8px 25px,
             rgba(255, 255, 255, 0.45) 0px 0px 16px 40px,
             rgba(255, 255, 255, 0.3) 0px 0px 32px 75px
-    }
+}
 
-    .white-shadow-effect {
-        box-shadow:
+.white-shadow-effect {
+  box-shadow:
             rgba(95, 93, 93, 0.639) 0px -10px 0px 5px inset,
             rgba(255, 255, 255, 0.9) 0px 0px 1px 2px,
             rgba(255, 255, 255, 0.75) 0px 0px 7px 5px,
             rgba(255, 255, 255, 0.6) 0px 0px 20px 25px,
             rgba(255, 255, 255, 0.45) 0px 0px 40px 75px,
             rgba(255, 255, 255, 0.3) 0px 0px 100px 100px
-    }
+}
 
-    /* Results Section (main subsection) */
-    /* Fonts */
-    .results-overhead-text {
-        @apply
-        font-sans
-        font-bold
-        text-white
-        text-2xl
-    }
+/* Results Section (main subsection) */
 
-    .md-results-overhead-text {
-        @apply
-        font-sans
-        font-bold
-        text-white
-        text-2xl
-    }
+/* Fonts */
 
-    .lg-results-overhead-text {
-        @apply
-        font-sans
-        font-bold
-        text-white
-        text-2xl
-    }
+.results-overhead-text {
+  font-family: Graphik, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 
-    .xl-results-overhead-text {
-        @apply
-        font-sans
-        font-bold
-        text-white
-        text-2xl
-    }
+.md-results-overhead-text {
+  font-family: Graphik, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 
-    #results-lower-center-text {
-        @apply
-        font-sans
-        font-bold
-        text-white
-        text-2xl
-    }
+.lg-results-overhead-text {
+  font-family: Graphik, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 
-    #md-results-lower-center-text {
-        @apply
-        font-sans
-        font-bold
-        text-white
-        text-2xl
-    }
+.xl-results-overhead-text {
+  font-family: Graphik, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 
-    #lg-results-lower-center-text {
-        @apply
-        font-sans
-        font-bold
-        text-white
-        text-2xl
-    }
+#results-lower-center-text {
+  font-family: Graphik, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 
-    #xl-results-lower-center-text {
-        @apply
-        font-sans
-        font-bold
-        text-white
-        text-2xl
-    }
+#md-results-lower-center-text {
+  font-family: Graphik, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 
-    /* Results Componets */
-    #results-btn {
-        border: rgb(156, 146, 146) 2px solid;
-        padding: 1%;
-        margin: 1%;
-        background-color: rgba(255, 255, 255, 0.975);
-        box-shadow:
+#lg-results-lower-center-text {
+  font-family: Graphik, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+#xl-results-lower-center-text {
+  font-family: Graphik, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+/* Results Componets */
+
+#results-btn {
+  border: rgb(156, 146, 146) 2px solid;
+  padding: 1%;
+  margin: 1%;
+  background-color: rgba(255, 255, 255, 0.975);
+  box-shadow:
             rgb(207, 204, 204) 0px 0px 40px 25px inset,
             rgba(255, 255, 255, 0.9) 0px 0px 10px 1px;
-    }
+}
 
-    .results-btn-effects {
-       @apply
-        font-semibold
-        tracking-wider
-        text-sm
-    }
+.results-btn-effects {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
 
-    .md-results-btn-effects {
-        width: 350px;
-        height: 40%;
-        border-radius: 7rem;
+.md-results-btn-effects {
+  width: 350px;
+  height: 40%;
+  border-radius: 7rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 100;
+  letter-spacing: 0.05em
+}
 
-        @apply
-        font-thin
-        tracking-wider
-        text-4xl
-    }
+.lg-results-btn-effects {
+  width: 550px;
+  height: 25%;
+  border-radius: 7rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 100;
+  letter-spacing: 0.05em
+}
 
-    .lg-results-btn-effects {
-        width: 550px;
-        height: 25%;
-        border-radius: 7rem;
+.xl-results-btn-effects {
+  width: 750px;
+  height: 25%;
+  border-radius: 7rem;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 100;
+  letter-spacing: 0.1em
+}
 
-        @apply
-        font-thin
-        tracking-wider
-        text-4xl
-    }
+/*Shadow Effects */
 
-    .xl-results-btn-effects {
-        width: 750px;
-        height: 25%;
-        border-radius: 7rem;
-
-        @apply
-        font-thin
-        tracking-widest
-        text-5xl
-    }
-     /*Shadow Effects */
-
-     .result-sm-white-shadow-effect {
-        box-shadow:
+.result-sm-white-shadow-effect {
+  box-shadow:
             rgba(95, 93, 93, 0.639) 0px -5px 0px 5px inset,
             rgba(255, 255, 255, 0.9) 0px 0px 1px 2px,
             rgba(255, 255, 255, 0.75) 0px 0px 4px 10px,
             rgba(255, 255, 255, 0.6) 0px 0px 8px 20px,
             rgba(255, 255, 255, 0.45) 0px 0px 16px 35px,
             rgba(255, 255, 255, 0.3) 0px 0px 32px 50px
-    }
+}
+
+.visible {
+  visibility: visible;
+}
+
+.collapse {
+  visibility: collapse;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.-bottom-16 {
+  bottom: -4rem;
+}
+
+.-bottom-5 {
+  bottom: -1.25rem;
+}
+
+.-left-7 {
+  left: -1.75rem;
+}
+
+.-right-7 {
+  right: -1.75rem;
+}
+
+.-bottom-11 {
+  bottom: -2.75rem;
+}
+
+.-bottom-8 {
+  bottom: -2rem;
+}
+
+.-left-10 {
+  left: -2.5rem;
+}
+
+.-right-10 {
+  right: -2.5rem;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.table {
+  display: table;
+}
+
+.contents {
+  display: contents;
+}
+
+.hidden {
+  display: none;
+}
+
+.border-collapse {
+  border-collapse: collapse;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.resize {
+  resize: both;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.space-y-0 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0px * var(--tw-space-y-reverse));
+}
+
+.border {
+  border-width: 1px;
+}
+
+.bg-blue-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+}
+
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
+}
+
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.from-blue-700 {
+  --tw-gradient-from: #1d4ed8 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(29 78 216 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-sky-500 {
+  --tw-gradient-from: #0ea5e9 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(14 165 233 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-10\% {
+  --tw-gradient-from-position: 10%;
+}
+
+.via-blue-700 {
+  --tw-gradient-to: rgb(29 78 216 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #1d4ed8 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.via-blue-900 {
+  --tw-gradient-to: rgb(30 58 138 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #1e3a8a var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.via-30\% {
+  --tw-gradient-via-position: 30%;
+}
+
+.to-gray-800 {
+  --tw-gradient-to: #1f2937 var(--tw-gradient-to-position);
+}
+
+.to-indigo-900 {
+  --tw-gradient-to: #312e81 var(--tw-gradient-to-position);
+}
+
+.to-60\% {
+  --tw-gradient-to-position: 60%;
+}
+
+.font-sans {
+  font-family: Graphik, sans-serif;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-thin {
+  font-weight: 100;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.tracking-tighter {
+  letter-spacing: -0.05em;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+
+.text-blue-700 {
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
+.text-indigo-900 {
+  --tw-text-opacity: 1;
+  color: rgb(49 46 129 / var(--tw-text-opacity));
+}
+
+.text-stone-600 {
+  --tw-text-opacity: 1;
+  color: rgb(87 83 78 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.outline {
+  outline-style: solid;
+}
+
+.ring {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
 /*Default CSS */
+
 /* Global */
+
 body {
-    height: 100vh;
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Header */
+
 header {
-    height: 25vh;
-    width: 100vw;
-    display: flex;
-    align-content: center;
-    justify-content: center;
+  height: 25vh;
+  width: 100vw;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 .headerbox {
-    height: 75%;
-    width: 75%;
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem;
-    border: white 2px solid;
-    border-radius: 2rem;
+  height: 75%;
+  width: 75%;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  border: white 2px solid;
+  border-radius: 2rem;
 }
 
 .headerbox-title {
-    height: 100%;
-    width:60%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  height: 100%;
+  width:60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .scorebox-parent {
-    height: 100%;
-    width:40%;
-    background-color: white;
-    border-radius: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    padding: 2.5%;
-    overflow: hidden;
+  height: 100%;
+  width:40%;
+  background-color: white;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  padding: 2.5%;
+  overflow: hidden;
 }
 
 .scorebox-text {
-    height: 40%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  height: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .scorebox-tally {
-    height: 60%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /* Main */
 
 main {
-    height: 65vh;
-    width: 100vw;
+  height: 65vh;
+  width: 100vw;
 }
 
 .main-content-parent {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .game-main-parent {
-    height: 85%;
-    width: 85%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 85%;
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Round Start (Main Subsection) */
+
 .game-upper-parent {
-    height: 20%;
-    display: flex;
-    padding-bottom: 50px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    overflow: visible;
+  height: 20%;
+  display: flex;
+  padding-bottom: 50px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: visible;
 }
 
 .game-lower-parent {
-    margin-top: 50%;
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: visible;
+  margin-top: 50%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
 }
 
 /* Round Results (Main Subsection) */
 
 .results-parent {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .results-side-parent {
-    height: 100%;
-    width: 35%;
-    display: flex;
-    flex-direction: column;
+  height: 100%;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
 }
 
 .results-side-upper {
-    height: 15%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  height: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .results-side-lower {
-    height: 85%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 85%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .results-center-parent {
-    height: 100%;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .results-center-container {
-    height: 40%;
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  height: 40%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /* Footer */
+
 footer {
-    height: 10vh;
-    width: 100vw;
+  height: 10vh;
+  width: 100vw;
 }
 
 .rules-btn-parent {
-    height: 100%;
-    width: 100%;
-    display: flex;
+  height: 100%;
+  width: 100%;
+  display: flex;
 }
 
 .rules-btn {
-    border: white 2px solid;
-    border-radius: 2rem;
-    padding: 1%;
-    margin: 1%;
-    background-color: rgba(240, 248, 255, 0);
-    color: white;
-    height: 55%;
-    min-width: 115px;
-    width: 10%;
+  border: white 2px solid;
+  border-radius: 2rem;
+  padding: 1%;
+  margin: 1%;
+  background-color: rgba(240, 248, 255, 0);
+  color: white;
+  height: 55%;
+  min-width: 115px;
+  width: 10%;
 }
 
+.hover\:sm-white-shadow-effect:hover {
+  box-shadow:
+            rgba(95, 93, 93, 0.639) 0px -5px 0px 5px inset,
+            rgba(255, 255, 255, 0.9) 0px 0px 1px 2px,
+            rgba(255, 255, 255, 0.75) 0px 0px 4px 15px,
+            rgba(255, 255, 255, 0.6) 0px 0px 8px 25px,
+            rgba(255, 255, 255, 0.45) 0px 0px 16px 40px,
+            rgba(255, 255, 255, 0.3) 0px 0px 32px 75px
+}
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9pbnB1dC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoib3V0cHV0LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFRhaWx3aW5kQ1NTIFN0eWxlcyAqL1xuQHRhaWx3aW5kIGJhc2U7XG5AdGFpbHdpbmQgY29tcG9uZW50cztcbkB0YWlsd2luZCB1dGlsaXRpZXM7XG5AbGF5ZXIgY29tcG9uZW50cyB7XG5cbiAgICAvKiBHbG9iYWwgKi9cbiAgICAuYmctcHJpbWFyeSB7XG4gICAgICAgIEBhcHBseSBcbiAgICAgICAgYmctZ3JhZGllbnQtdG8tYlxuICAgICAgICBmcm9tLXNreS01MDAgZnJvbS0xMCVcbiAgICAgICAgdmlhLWJsdWUtNzAwIHZpYS0zMCVcbiAgICAgICAgdG8taW5kaWdvLTkwMCB0by02MCVcbiAgICB9XG5cbiAgICAuYmctZGFyayB7XG4gICAgICAgIEBhcHBseVxuICAgICAgICBiZy1ncmFkaWVudC10by1iXG4gICAgICAgIGZyb20tYmx1ZS03MDAgZnJvbS0xMCVcbiAgICAgICAgdG8tZ3JheS04MDAgdmlhLTMwJVxuICAgICAgICB2aWEtYmx1ZS05MDAgdG8tNjAlXG4gICAgfVxuXG4gICAgLyogaGVhZGVyIGNvbXBvbmVudHMgKi9cbiAgICAuaGVhZGVyLWZvbnQge1xuICAgICAgICBAYXBwbHlcbiAgICAgICAgZm9udC1zYW5zXG4gICAgICAgIGZvbnQtYm9sZFxuICAgICAgICB0ZXh0LXdoaXRlXG4gICAgICAgIHRleHQtMnhsXG4gICAgfVxuXG4gICAgLm1kLWhlYWRlci1mb250IHtcbiAgICAgICAgQGFwcGx5XG4gICAgICAgIGZvbnQtc2Fuc1xuICAgICAgICBmb250LXNlbWlib2xkXG4gICAgICAgIHRleHQtd2hpdGVcbiAgICAgICAgdGV4dC00eGxcbiAgICB9XG5cbiAgICAubGctaGVhZGVyLWZvbnQge1xuICAgICAgICBAYXBwbHlcbiAgICAgICAgZm9udC1zYW5zXG4gICAgICAgIGZvbnQtc2VtaWJvbGRcbiAgICAgICAgdGV4dC13aGl0ZVxuICAgICAgICB0ZXh0LTV4bFxuICAgIH1cblxuICAgIC54bC1oZWFkZXItZm9udCB7XG4gICAgICAgIEBhcHBseVxuICAgICAgICBmb250LXNhbnNcbiAgICAgICAgdGV4dC13aGl0ZVxuICAgICAgICB0ZXh0LTZ4bFxuICAgIH1cblxuXG4gICAgLyogbm90ZTogdGV4dC1iYXNlIGlzIHRoZSBcImRlZmF1bHRcIiBvciBcImJhc2VcIiBzaXplICovXG4gICAgLnNjb3JlLWZvbnQge1xuICAgICAgICBAYXBwbHlcbiAgICAgICAgZm9udC1tZWRpdW1cbiAgICAgICAgdGV4dC1ibHVlLTcwMFxuICAgICAgICB0ZXh0LWJhc2VcbiAgICAgICAgdHJhY2tpbmctd2lkZXJcbiAgICB9XG5cbiAgICAubWQtc2NvcmUtZm9udCB7XG4gICAgICAgIEBhcHBseVxuICAgICAgICBmb250LXRoaW5cbiAgICAgICAgdGV4dC1ibHVlLTcwMFxuICAgICAgICB0ZXh0LTJ4bFxuICAgICAgICB0cmFja2luZy13aWRlXG4gICAgfVxuXG4gICAgLmxnLXNjb3JlLWZvbnQge1xuICAgICAgICBAYXBwbHlcbiAgICAgICAgdGV4dC1ibHVlLTcwMFxuICAgICAgICB0ZXh0LTN4bFxuICAgICAgICB0cmFja2luZy13aWRlXG4gICAgfVxuXG4gICAgLnhsLXNjb3JlLWZvbnQge1xuICAgICAgICBAYXBwbHlcbiAgICAgICAgZm9udC1tZWRpdW1cbiAgICAgICAgdGV4dC1ibHVlLTcwMFxuICAgICAgICB0ZXh0LTN4bFxuICAgICAgICB0cmFja2luZy13aWRlclxuICAgIH1cblxuICAgIC5zY29yZS1mb250LXRhbGx5IHtcbiAgICAgICAgQGFwcGx5XG4gICAgICAgIGZvbnQtZXh0cmFib2xkXG4gICAgICAgIHRleHQtc3RvbmUtNjAwXG4gICAgICAgIHRleHQtM3hsXG4gICAgICAgIHRyYWNraW5nLXRpZ2h0ZXJcbiAgICB9XG5cbiAgICAubWQtc2NvcmUtZm9udC10YWxseSB7XG4gICAgICAgIEBhcHBseVxuICAgICAgICBmb250LWV4dHJhYm9sZFxuICAgICAgICB0ZXh0LXN0b25lLTYwMFxuICAgICAgICB0ZXh0LTZ4bFxuICAgICAgICB0cmFja2luZy10aWdodGVyXG4gICAgfVxuXG4gICAgLmxnLXNjb3JlLWZvbnQtdGFsbHkge1xuICAgICAgICBAYXBwbHlcbiAgICAgICAgZm9udC1leHRyYWJvbGRcbiAgICAgICAgdGV4dC1zdG9uZS02MDBcbiAgICAgICAgdGV4dC03eGxcbiAgICAgICAgdHJhY2tpbmctdGlnaHRlclxuICAgIH1cblxuICAgIC54bC1zY29yZS1mb250LXRhbGx5IHtcbiAgICAgICAgQGFwcGx5XG4gICAgICAgIGZvbnQtYmxhY2tcbiAgICAgICAgdGV4dC1zdG9uZS02MDBcbiAgICAgICAgdGV4dC04eGxcbiAgICAgICAgdHJhY2tpbmctdGlnaHRlclxuICAgIH1cblxuICAgIC8qIE1haW4gQ29tcG9uZW50cyAqL1xuICAgIC8qIEdhbWUgUGFnZSAoTWFpbiBTdWJzZWN0aW9uKSAqL1xuICAgIC8qIFRyaWFuZ2xlIEJnIGNvbnRyb2wgKi9cbiAgICAuZ2FtZS1iZy1kaXYge1xuICAgICAgICB3aWR0aDogMjI1cHg7XG4gICAgICAgIGhlaWdodDogMjAwcHg7XG4gICAgICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vc3JjL2ltYWdlcy9iZy10cmlhbmdsZS5zdmcnKTtcbiAgICAgICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgICAgICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgfVxuXG4gICAgLm1kLWdhbWUtYmctZGl2IHtcbiAgICAgICAgd2lkdGg6IDM3NXB4O1xuICAgICAgICBoZWlnaHQ6IDMzNXB4O1xuICAgICAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uL3NyYy9pbWFnZXMvYmctdHJpYW5nbGUuc3ZnJyk7XG4gICAgICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gICAgICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgIH1cblxuICAgIC5sZy1nYW1lLWJnLWRpdiB7XG4gICAgICAgIHdpZHRoOiA1NTVweDtcbiAgICAgICAgaGVpZ2h0OiA0OTVweDtcbiAgICAgICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi9zcmMvaW1hZ2VzL2JnLXRyaWFuZ2xlLnN2ZycpO1xuICAgICAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgICAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICAgICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICB9XG5cbiAgICAueGwtZ2FtZS1iZy1kaXYge1xuICAgICAgICB3aWR0aDogNzc1cHg7XG4gICAgICAgIGhlaWdodDogNjkwcHg7XG4gICAgICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vc3JjL2ltYWdlcy9iZy10cmlhbmdsZS5zdmcnKTtcbiAgICAgICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgICAgICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgfVxuXG4gICAgLyogR2FtZSBCdXR0b25zICovXG4gICAgLm1haW4tZ2FtZS1idG4ge1xuICAgICAgICBoZWlnaHQ6IDEwNXB4O1xuICAgICAgICB3aWR0aDogMTA1cHg7XG4gICAgICAgIGJvcmRlcjogYmxhY2sgMXB4IHNvbGlkO1xuICAgICAgICBib3JkZXItcmFkaXVzOiAxMHJlbTtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIGJveC1zaGFkb3c6IHJnYmEoNSwgNSwgNSwgMC4zNTcpIDBweCAtNXB4IDJweCAzcHggaW5zZXQ7XG4gICAgfVxuICAgIFxuICAgIC5tZC1tYWluLWdhbWUtYnRuIHtcbiAgICAgICAgaGVpZ2h0OiAxNTBweDtcbiAgICAgICAgd2lkdGg6IDE1MHB4O1xuICAgICAgICBib3JkZXI6IGJsYWNrIDFweCBzb2xpZDtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogMTByZW07XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICBib3gtc2hhZG93OiByZ2JhKDk1LCA5MywgOTMsIDAuMzk2KSAwcHggLTEwcHggNHB4IDNweCBpbnNldDtcbiAgICB9XG4gICAgXG4gICAgLmxnLW1haW4tZ2FtZS1idG4ge1xuICAgICAgICBoZWlnaHQ6IDIyNXB4O1xuICAgICAgICB3aWR0aDogMjI1cHg7XG4gICAgICAgIGJvcmRlcjogYmxhY2sgMXB4IHNvbGlkO1xuICAgICAgICBib3JkZXItcmFkaXVzOiAxMHJlbTtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIGJveC1zaGFkb3c6IHJnYmEoOTUsIDkzLCA5MywgMC4zOTYpIDBweCAtMTJweCAycHggOHB4IGluc2V0O1xuICAgIH1cbiAgICBcbiAgICAueGwtbWFpbi1nYW1lLWJ0biB7XG4gICAgICAgIGhlaWdodDogMjUwcHg7XG4gICAgICAgIHdpZHRoOiAyNTBweDtcbiAgICAgICAgYm9yZGVyOiBibGFjayAxcHggc29saWQ7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDEwcmVtO1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgYm94LXNoYWRvdzogcmdiYSg5NSwgOTMsIDkzLCAwLjM5NikgMHB4IC0xNXB4IDRweCAzcHggaW5zZXQ7XG4gICAgfVxuICAgIFxuICAgIC5nYW1lLWJ0bi1pbm5lciB7XG4gICAgICAgIGhlaWdodDogNzVweDtcbiAgICAgICAgd2lkdGg6IDc1cHg7XG4gICAgICAgIGJvcmRlcjogYmxhY2sgMXB4IHNvbGlkO1xuICAgICAgICBib3JkZXItcmFkaXVzOiAxMHJlbTtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIGJveC1zaGFkb3c6IHJnYig5NSwgOTMsIDkzKSAwcHggNXB4IDVweCAzcHggaW5zZXQ7XG4gICAgfVxuICAgIFxuICAgIC5tZC1nYW1lLWJ0bi1pbm5lciB7XG4gICAgICAgIGhlaWdodDogMTAwcHg7XG4gICAgICAgIHdpZHRoOiAxMDBweDtcbiAgICAgICAgYm9yZGVyOiBibGFjayAxcHggc29saWQ7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDEwcmVtO1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgYm94LXNoYWRvdzogcmdiYSg5NSwgOTMsIDkzLCAwLjYzOSkgMHB4IDEwcHggNXB4IDVweCBpbnNldDtcbiAgICB9XG4gICAgXG4gICAgLmxnLWdhbWUtYnRuLWlubmVyIHtcbiAgICAgICAgaGVpZ2h0OiAxNTBweDtcbiAgICAgICAgd2lkdGg6IDE1MHB4O1xuICAgICAgICBib3JkZXI6IGJsYWNrIDFweCBzb2xpZDtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogMTByZW07XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICBib3gtc2hhZG93OiByZ2JhKDk1LCA5MywgOTMsIDAuNjM5KSAwcHggMTBweCA1cHggNXB4IGluc2V0O1xuICAgIH1cbiAgICBcbiAgICAueGwtZ2FtZS1idG4taW5uZXIge1xuICAgICAgICBoZWlnaHQ6IDE3NXB4O1xuICAgICAgICB3aWR0aDogMTc1cHg7XG4gICAgICAgIGJvcmRlcjogYmxhY2sgMXB4IHNvbGlkO1xuICAgICAgICBib3JkZXItcmFkaXVzOiAxMHJlbTtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIGJveC1zaGFkb3c6IHJnYmEoOTUsIDkzLCA5MywgMC42MzkpIDBweCAxMHB4IDVweCA1cHggaW5zZXQ7XG4gICAgfVxuXG4gICAgLypTaGFkb3cgRWZmZWN0cyAqL1xuICAgIC5zbS13aGl0ZS1zaGFkb3ctZWZmZWN0IHtcbiAgICAgICAgYm94LXNoYWRvdzpcbiAgICAgICAgICAgIHJnYmEoOTUsIDkzLCA5MywgMC42MzkpIDBweCAtNXB4IDBweCA1cHggaW5zZXQsXG4gICAgICAgICAgICByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuOSkgMHB4IDBweCAxcHggMnB4LFxuICAgICAgICAgICAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjc1KSAwcHggMHB4IDRweCAxNXB4LFxuICAgICAgICAgICAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjYpIDBweCAwcHggOHB4IDI1cHgsXG4gICAgICAgICAgICByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuNDUpIDBweCAwcHggMTZweCA0MHB4LFxuICAgICAgICAgICAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjMpIDBweCAwcHggMzJweCA3NXB4XG4gICAgfVxuXG4gICAgLndoaXRlLXNoYWRvdy1lZmZlY3Qge1xuICAgICAgICBib3gtc2hhZG93OlxuICAgICAgICAgICAgcmdiYSg5NSwgOTMsIDkzLCAwLjYzOSkgMHB4IC0xMHB4IDBweCA1cHggaW5zZXQsXG4gICAgICAgICAgICByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuOSkgMHB4IDBweCAxcHggMnB4LFxuICAgICAgICAgICAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjc1KSAwcHggMHB4IDdweCA1cHgsXG4gICAgICAgICAgICByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuNikgMHB4IDBweCAyMHB4IDI1cHgsXG4gICAgICAgICAgICByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuNDUpIDBweCAwcHggNDBweCA3NXB4LFxuICAgICAgICAgICAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjMpIDBweCAwcHggMTAwcHggMTAwcHhcbiAgICB9XG5cbiAgICAvKiBSZXN1bHRzIFNlY3Rpb24gKG1haW4gc3Vic2VjdGlvbikgKi9cbiAgICAvKiBGb250cyAqL1xuICAgIC5yZXN1bHRzLW92ZXJoZWFkLXRleHQge1xuICAgICAgICBAYXBwbHlcbiAgICAgICAgZm9udC1zYW5zXG4gICAgICAgIGZvbnQtYm9sZFxuICAgICAgICB0ZXh0LXdoaXRlXG4gICAgICAgIHRleHQtMnhsXG4gICAgfVxuXG4gICAgLm1kLXJlc3VsdHMtb3ZlcmhlYWQtdGV4dCB7XG4gICAgICAgIEBhcHBseVxuICAgICAgICBmb250LXNhbnNcbiAgICAgICAgZm9udC1ib2xkXG4gICAgICAgIHRleHQtd2hpdGVcbiAgICAgICAgdGV4dC0yeGxcbiAgICB9XG5cbiAgICAubGctcmVzdWx0cy1vdmVyaGVhZC10ZXh0IHtcbiAgICAgICAgQGFwcGx5XG4gICAgICAgIGZvbnQtc2Fuc1xuICAgICAgICBmb250LWJvbGRcbiAgICAgICAgdGV4dC13aGl0ZVxuICAgICAgICB0ZXh0LTJ4bFxuICAgIH1cblxuICAgIC54bC1yZXN1bHRzLW92ZXJoZWFkLXRleHQge1xuICAgICAgICBAYXBwbHlcbiAgICAgICAgZm9udC1zYW5zXG4gICAgICAgIGZvbnQtYm9sZFxuICAgICAgICB0ZXh0LXdoaXRlXG4gICAgICAgIHRleHQtMnhsXG4gICAgfVxuXG4gICAgI3Jlc3VsdHMtbG93ZXItY2VudGVyLXRleHQge1xuICAgICAgICBAYXBwbHlcbiAgICAgICAgZm9udC1zYW5zXG4gICAgICAgIGZvbnQtYm9sZFxuICAgICAgICB0ZXh0LXdoaXRlXG4gICAgICAgIHRleHQtMnhsXG4gICAgfVxuXG4gICAgI21kLXJlc3VsdHMtbG93ZXItY2VudGVyLXRleHQge1xuICAgICAgICBAYXBwbHlcbiAgICAgICAgZm9udC1zYW5zXG4gICAgICAgIGZvbnQtYm9sZFxuICAgICAgICB0ZXh0LXdoaXRlXG4gICAgICAgIHRleHQtMnhsXG4gICAgfVxuXG4gICAgI2xnLXJlc3VsdHMtbG93ZXItY2VudGVyLXRleHQge1xuICAgICAgICBAYXBwbHlcbiAgICAgICAgZm9udC1zYW5zXG4gICAgICAgIGZvbnQtYm9sZFxuICAgICAgICB0ZXh0LXdoaXRlXG4gICAgICAgIHRleHQtMnhsXG4gICAgfVxuXG4gICAgI3hsLXJlc3VsdHMtbG93ZXItY2VudGVyLXRleHQge1xuICAgICAgICBAYXBwbHlcbiAgICAgICAgZm9udC1zYW5zXG4gICAgICAgIGZvbnQtYm9sZFxuICAgICAgICB0ZXh0LXdoaXRlXG4gICAgICAgIHRleHQtMnhsXG4gICAgfVxuXG4gICAgLyogUmVzdWx0cyBDb21wb25ldHMgKi9cbiAgICAjcmVzdWx0cy1idG4ge1xuICAgICAgICBib3JkZXI6IHJnYigxNTYsIDE0NiwgMTQ2KSAycHggc29saWQ7XG4gICAgICAgIHBhZGRpbmc6IDElO1xuICAgICAgICBtYXJnaW46IDElO1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuOTc1KTtcbiAgICAgICAgYm94LXNoYWRvdzpcbiAgICAgICAgICAgIHJnYigyMDcsIDIwNCwgMjA0KSAwcHggMHB4IDQwcHggMjVweCBpbnNldCxcbiAgICAgICAgICAgIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC45KSAwcHggMHB4IDEwcHggMXB4O1xuICAgIH1cblxuICAgIC5yZXN1bHRzLWJ0bi1lZmZlY3RzIHtcbiAgICAgICBAYXBwbHlcbiAgICAgICAgZm9udC1zZW1pYm9sZFxuICAgICAgICB0cmFja2luZy13aWRlclxuICAgICAgICB0ZXh0LXNtXG4gICAgfVxuXG4gICAgLm1kLXJlc3VsdHMtYnRuLWVmZmVjdHMge1xuICAgICAgICB3aWR0aDogMzUwcHg7XG4gICAgICAgIGhlaWdodDogNDAlO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA3cmVtO1xuXG4gICAgICAgIEBhcHBseVxuICAgICAgICBmb250LXRoaW5cbiAgICAgICAgdHJhY2tpbmctd2lkZXJcbiAgICAgICAgdGV4dC00eGxcbiAgICB9XG5cbiAgICAubGctcmVzdWx0cy1idG4tZWZmZWN0cyB7XG4gICAgICAgIHdpZHRoOiA1NTBweDtcbiAgICAgICAgaGVpZ2h0OiAyNSU7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDdyZW07XG5cbiAgICAgICAgQGFwcGx5XG4gICAgICAgIGZvbnQtdGhpblxuICAgICAgICB0cmFja2luZy13aWRlclxuICAgICAgICB0ZXh0LTR4bFxuICAgIH1cblxuICAgIC54bC1yZXN1bHRzLWJ0bi1lZmZlY3RzIHtcbiAgICAgICAgd2lkdGg6IDc1MHB4O1xuICAgICAgICBoZWlnaHQ6IDI1JTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogN3JlbTtcblxuICAgICAgICBAYXBwbHlcbiAgICAgICAgZm9udC10aGluXG4gICAgICAgIHRyYWNraW5nLXdpZGVzdFxuICAgICAgICB0ZXh0LTV4bFxuICAgIH1cbiAgICAgLypTaGFkb3cgRWZmZWN0cyAqL1xuXG4gICAgIC5yZXN1bHQtc20td2hpdGUtc2hhZG93LWVmZmVjdCB7XG4gICAgICAgIGJveC1zaGFkb3c6XG4gICAgICAgICAgICByZ2JhKDk1LCA5MywgOTMsIDAuNjM5KSAwcHggLTVweCAwcHggNXB4IGluc2V0LFxuICAgICAgICAgICAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjkpIDBweCAwcHggMXB4IDJweCxcbiAgICAgICAgICAgIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC43NSkgMHB4IDBweCA0cHggMTBweCxcbiAgICAgICAgICAgIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC42KSAwcHggMHB4IDhweCAyMHB4LFxuICAgICAgICAgICAgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjQ1KSAwcHggMHB4IDE2cHggMzVweCxcbiAgICAgICAgICAgIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4zKSAwcHggMHB4IDMycHggNTBweFxuICAgIH1cbn1cblxuLypEZWZhdWx0IENTUyAqL1xuLyogR2xvYmFsICovXG5ib2R5IHtcbiAgICBoZWlnaHQ6IDEwMHZoO1xuICAgIHdpZHRoOiAxMDB2dztcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG59XG5cbi8qIEhlYWRlciAqL1xuaGVhZGVyIHtcbiAgICBoZWlnaHQ6IDI1dmg7XG4gICAgd2lkdGg6IDEwMHZ3O1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24tY29udGVudDogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xufVxuXG4uaGVhZGVyYm94IHtcbiAgICBoZWlnaHQ6IDc1JTtcbiAgICB3aWR0aDogNzUlO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24tc2VsZjogY2VudGVyO1xuICAgIGp1c3RpZnktc2VsZjogY2VudGVyO1xuICAgIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xuICAgIHBhZGRpbmc6IDFyZW07XG4gICAgYm9yZGVyOiB3aGl0ZSAycHggc29saWQ7XG4gICAgYm9yZGVyLXJhZGl1czogMnJlbTtcbn1cblxuLmhlYWRlcmJveC10aXRsZSB7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOjYwJTtcblxuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn1cblxuLnNjb3JlYm94LXBhcmVudCB7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOjQwJTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICBib3JkZXItcmFkaXVzOiAycmVtO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktaXRlbXM6IGNlbnRlcjtcbiAgICBwYWRkaW5nOiAyLjUlO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG59XG5cbi5zY29yZWJveC10ZXh0IHtcbiAgICBoZWlnaHQ6IDQwJTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xufVxuXG4uc2NvcmVib3gtdGFsbHkge1xuICAgIGhlaWdodDogNjAlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG59XG5cbi8qIE1haW4gKi9cblxubWFpbiB7XG4gICAgaGVpZ2h0OiA2NXZoO1xuICAgIHdpZHRoOiAxMDB2dztcbn1cblxuLm1haW4tY29udGVudC1wYXJlbnQge1xuICAgIGhlaWdodDogMTAwJTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi5nYW1lLW1haW4tcGFyZW50IHtcbiAgICBoZWlnaHQ6IDg1JTtcbiAgICB3aWR0aDogODUlO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLyogUm91bmQgU3RhcnQgKE1haW4gU3Vic2VjdGlvbikgKi9cbi5nYW1lLXVwcGVyLXBhcmVudCB7XG4gICAgaGVpZ2h0OiAyMCU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBwYWRkaW5nLWJvdHRvbTogNTBweDtcbiAgICBmbGV4LWRpcmVjdGlvbjogcm93O1xuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIG92ZXJmbG93OiB2aXNpYmxlO1xufVxuXG4uZ2FtZS1sb3dlci1wYXJlbnQge1xuICAgIG1hcmdpbi10b3A6IDUwJTtcbiAgICBoZWlnaHQ6IDIwJTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgb3ZlcmZsb3c6IHZpc2libGU7XG59XG5cbi8qIFJvdW5kIFJlc3VsdHMgKE1haW4gU3Vic2VjdGlvbikgKi9cblxuLnJlc3VsdHMtcGFyZW50IHtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWRpcmVjdGlvbjogcm93O1xufVxuXG4ucmVzdWx0cy1zaWRlLXBhcmVudCB7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAzNSU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xufVxuXG4ucmVzdWx0cy1zaWRlLXVwcGVyIHtcbiAgICBoZWlnaHQ6IDE1JTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4ucmVzdWx0cy1zaWRlLWxvd2VyIHtcbiAgICBoZWlnaHQ6IDg1JTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi5yZXN1bHRzLWNlbnRlci1wYXJlbnQge1xuICAgIGhlaWdodDogMTAwJTtcbiAgICB3aWR0aDogMzAlO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4ucmVzdWx0cy1jZW50ZXItY29udGFpbmVyIHtcbiAgICBoZWlnaHQ6IDQwJTtcbiAgICB3aWR0aDogOTAlO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi8qIEZvb3RlciAqL1xuZm9vdGVyIHtcbiAgICBoZWlnaHQ6IDEwdmg7XG4gICAgd2lkdGg6IDEwMHZ3O1xufVxuXG4ucnVsZXMtYnRuLXBhcmVudCB7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGRpc3BsYXk6IGZsZXg7XG59XG5cbi5ydWxlcy1idG4ge1xuICAgIGJvcmRlcjogd2hpdGUgMnB4IHNvbGlkO1xuICAgIGJvcmRlci1yYWRpdXM6IDJyZW07XG4gICAgcGFkZGluZzogMSU7XG4gICAgbWFyZ2luOiAxJTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDI0MCwgMjQ4LCAyNTUsIDApO1xuICAgIGNvbG9yOiB3aGl0ZTtcbiAgICBoZWlnaHQ6IDU1JTtcbiAgICBtaW4td2lkdGg6IDExNXB4O1xuICAgIHdpZHRoOiAxMCU7XG59XG5cbiJdfQ== */
+@media (prefers-color-scheme: dark) {
+  .dark\:bg-dark {
+    background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+    --tw-gradient-from: #1d4ed8 var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(29 78 216 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    --tw-gradient-from-position: 10%;
+    --tw-gradient-to: rgb(30 58 138 / 0)  var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), #1e3a8a var(--tw-gradient-via-position), var(--tw-gradient-to);
+    --tw-gradient-via-position: 30%;
+    --tw-gradient-to: #1f2937 var(--tw-gradient-to-position);
+    --tw-gradient-to-position: 60%;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:md-header-font {
+    font-family: Graphik, sans-serif;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .md\:md-score-font {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 100;
+    letter-spacing: 0.025em;
+    --tw-text-opacity: 1;
+    color: rgb(29 78 216 / var(--tw-text-opacity));
+  }
+
+  .md\:md-score-font-tally {
+    font-size: 3.75rem;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    --tw-text-opacity: 1;
+    color: rgb(87 83 78 / var(--tw-text-opacity));
+  }
+
+  .md\:md-game-bg-div {
+    width: 375px;
+    height: 335px;
+    background-image: url('../src/images/bg-triangle.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: visible;
+  }
+
+  .md\:md-main-game-btn {
+    height: 150px;
+    width: 150px;
+    border: black 1px solid;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(95, 93, 93, 0.396) 0px -10px 4px 3px inset;
+  }
+
+  .md\:md-game-btn-inner {
+    height: 100px;
+    width: 100px;
+    border: black 1px solid;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(95, 93, 93, 0.639) 0px 10px 5px 5px inset;
+  }
+
+  .md\:white-shadow-effect {
+    box-shadow:
+            rgba(95, 93, 93, 0.639) 0px -10px 0px 5px inset,
+            rgba(255, 255, 255, 0.9) 0px 0px 1px 2px,
+            rgba(255, 255, 255, 0.75) 0px 0px 7px 5px,
+            rgba(255, 255, 255, 0.6) 0px 0px 20px 25px,
+            rgba(255, 255, 255, 0.45) 0px 0px 40px 75px,
+            rgba(255, 255, 255, 0.3) 0px 0px 100px 100px
+  }
+
+  .md\:hover\:white-shadow-effect:hover {
+    box-shadow:
+            rgba(95, 93, 93, 0.639) 0px -10px 0px 5px inset,
+            rgba(255, 255, 255, 0.9) 0px 0px 1px 2px,
+            rgba(255, 255, 255, 0.75) 0px 0px 7px 5px,
+            rgba(255, 255, 255, 0.6) 0px 0px 20px 25px,
+            rgba(255, 255, 255, 0.45) 0px 0px 40px 75px,
+            rgba(255, 255, 255, 0.3) 0px 0px 100px 100px
+  }
+}
+
+@media (min-width: 1366px) {
+  .lg\:lg-header-font {
+    font-family: Graphik, sans-serif;
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 600;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .lg\:lg-score-font {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    letter-spacing: 0.025em;
+    --tw-text-opacity: 1;
+    color: rgb(29 78 216 / var(--tw-text-opacity));
+  }
+
+  .lg\:lg-score-font-tally {
+    font-size: 4.5rem;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    --tw-text-opacity: 1;
+    color: rgb(87 83 78 / var(--tw-text-opacity));
+  }
+
+  .lg\:lg-game-bg-div {
+    width: 555px;
+    height: 495px;
+    background-image: url('../src/images/bg-triangle.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: visible;
+  }
+
+  .lg\:lg-main-game-btn {
+    height: 225px;
+    width: 225px;
+    border: black 1px solid;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(95, 93, 93, 0.396) 0px -12px 2px 8px inset;
+  }
+
+  .lg\:lg-game-btn-inner {
+    height: 150px;
+    width: 150px;
+    border: black 1px solid;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(95, 93, 93, 0.639) 0px 10px 5px 5px inset;
+  }
+
+  .lg\:white-shadow-effect {
+    box-shadow:
+            rgba(95, 93, 93, 0.639) 0px -10px 0px 5px inset,
+            rgba(255, 255, 255, 0.9) 0px 0px 1px 2px,
+            rgba(255, 255, 255, 0.75) 0px 0px 7px 5px,
+            rgba(255, 255, 255, 0.6) 0px 0px 20px 25px,
+            rgba(255, 255, 255, 0.45) 0px 0px 40px 75px,
+            rgba(255, 255, 255, 0.3) 0px 0px 100px 100px
+  }
+
+  .lg\:lg-results-btn-effects {
+    width: 550px;
+    height: 25%;
+    border-radius: 7rem;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 100;
+    letter-spacing: 0.05em
+  }
+}
+
+@media (min-width: 2500px) {
+  .xl\:xl-header-font {
+    font-family: Graphik, sans-serif;
+    font-size: 3.75rem;
+    line-height: 1;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .xl\:xl-score-font {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    --tw-text-opacity: 1;
+    color: rgb(29 78 216 / var(--tw-text-opacity));
+  }
+
+  .xl\:xl-score-font-tally {
+    font-size: 6rem;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    --tw-text-opacity: 1;
+    color: rgb(87 83 78 / var(--tw-text-opacity));
+  }
+
+  .xl\:xl-game-bg-div {
+    width: 775px;
+    height: 690px;
+    background-image: url('../src/images/bg-triangle.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: visible;
+  }
+
+  .xl\:xl-main-game-btn {
+    height: 250px;
+    width: 250px;
+    border: black 1px solid;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(95, 93, 93, 0.396) 0px -15px 4px 3px inset;
+  }
+
+  .xl\:xl-game-btn-inner {
+    height: 175px;
+    width: 175px;
+    border: black 1px solid;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(95, 93, 93, 0.639) 0px 10px 5px 5px inset;
+  }
+
+  .xl\:white-shadow-effect {
+    box-shadow:
+            rgba(95, 93, 93, 0.639) 0px -10px 0px 5px inset,
+            rgba(255, 255, 255, 0.9) 0px 0px 1px 2px,
+            rgba(255, 255, 255, 0.75) 0px 0px 7px 5px,
+            rgba(255, 255, 255, 0.6) 0px 0px 20px 25px,
+            rgba(255, 255, 255, 0.45) 0px 0px 40px 75px,
+            rgba(255, 255, 255, 0.3) 0px 0px 100px 100px
+  }
+
+  .xl\:xl-results-btn-effects {
+    width: 750px;
+    height: 25%;
+    border-radius: 7rem;
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 100;
+    letter-spacing: 0.1em
+  }
+}
+
+.hover\:bg-rose-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(225 29 72 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-sky-400:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(56 189 248 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 768px) {
+  .md\:-bottom-8 {
+    bottom: -2rem;
+  }
+
+  .md\:-left-10 {
+    left: -2.5rem;
+  }
+
+  .md\:-right-10 {
+    right: -2.5rem;
+  }
+
+  .md\:justify-end {
+    justify-content: flex-end;
+  }
+
+  .md\:font-normal {
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1366px) {
+  .lg\:-bottom-11 {
+    bottom: -2.75rem;
+  }
+
+  .lg\:font-semibold {
+    font-weight: 600;
+  }
+
+  .lg\:tracking-widest {
+    letter-spacing: 0.1em;
+  }
+}
+
