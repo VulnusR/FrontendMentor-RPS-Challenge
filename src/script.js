@@ -147,7 +147,7 @@ function generateChoiceHTML(choice) {
     return `
         <div id="display-${choice}" class="btn-game ${colorClass} main-game-btn result-sm-white-shadow-effect md:md-main-game-btn md:white-shadow-effect lg:lg-main-game-btn lg:white-shadow-effect xl:white-shadow-effect xl:xl-main-game-btn">
             <div class="game-btn-inner bg-white md:md-game-btn-inner lg:lg-game-btn-inner xl:xl-game-btn-inner">
-                <img src="./images/icon-${resultsIcon}.svg" alt="${capitalizeFirstLetter(choice)} Icon for RPS" />
+                <img src="./src/images/icon-${resultsIcon}.svg" alt="${capitalizeFirstLetter(choice)} Icon for RPS" />
             </div>
         </div>
     `;
