@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/VulnusR/FrontendMentor-RPS-Challenge)
-- Live Site URL: [Live Application](https://your-live-site-url.com)
+- Live Site URL: [Live Application](https://vulnusr.github.io/FrontendMentor-RPS-Challenge/)
 
 ## My process
 
