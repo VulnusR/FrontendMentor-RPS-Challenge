@@ -1,6 +1,6 @@
 {
   "scripts":
-    {"start":"npm run build && live-server --open=src/",
+    {"start":"npm run build && live-server --open=./",
     "build":"postcss src/input.css -o ./dist/output.css"
   },
   "devDependencies":{"postcss":"^8.4.24",
